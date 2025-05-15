@@ -1,0 +1,27 @@
+1) Client Server Setup - Multiplexing
+2) TLS Decryption in Wireshark to view encryoted payload data
+
+
+QUIC Stream Router with Wireshark Decryption
+You successfully implemented a TLS key logging system for QUIC (HTTP/3) traffic, allowing you to decrypt and analyze QUIC communications in Wireshark. Here's what you accomplished:
+1. TLS Key Logging Implementation
+Modified the aioquic library to log TLS 1.3 session keys to a file
+Configured both client and server to use secrets_log_file for logging keys
+Created a line-buffered key log file that Wireshark can use for decryption
+2. QUIC HTTP/3 Infrastructure
+Built a QUIC proxy server that routes HTTP/3 streams to different microservices
+Created three separate microservices (video, text, control) running on different ports
+Implemented a client that sends test data across multiple streams simultaneously
+3. Stream Multiplexing
+Successfully multiplexed different data streams over a single QUIC connection
+Routed streams to appropriate backend services based on their request paths
+Handled bidirectional communication with proper HTTP/3 framing
+4. Debugging & Troubleshooting
+Resolved compatibility issues with aioquic 0.9.20
+Fixed H3Connection implementation to properly handle headers and data events
+Implemented stream tracking for proper data routing
+5. Wireshark Decryption
+Successfully captured QUIC traffic between client and server
+Configured Wireshark to use the generated keylog file
+Verified decryption by viewing the plaintext data in the captured packets
+This implementation provides you with full visibility into encrypted QUIC traffic, which is normally impossible to inspect due to TLS 1.3 encryption, making it an invaluable tool for debugging and analyzing QUIC-based applications.

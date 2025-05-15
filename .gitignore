@@ -1,0 +1,9 @@
+# Adding Certificates
+# Ignore all .crt files
+*.crt
+# Ignore all .pem files
+*.pem
+
+# Ignore virtual environment
+# Ignore all .venv directories
+.q/

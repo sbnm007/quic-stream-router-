@@ -4,6 +4,3 @@
 # Ignore all .pem files
 *.pem
 
-# Ignore virtual environment
-# Ignore all .venv directories
-.q/

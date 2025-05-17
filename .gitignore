@@ -4,3 +4,5 @@
 # Ignore all .pem files
 *.pem
 
+quic_sslkeylog.log
+captures

@@ -1,0 +1,120 @@
+{
+  "stream_metrics": {
+    "0": {
+      "stream_id": 0,
+      "path": "/video",
+      "duration": 0.00012183189392089844,
+      "bytes_sent": 30,
+      "bytes_received": 26,
+      "packets_sent": 1,
+      "packets_received": 3,
+      "retransmissions": 0,
+      "quic_latency": [
+        0.02745962142944336,
+        0.0488123893737793,
+        0.07140016555786133
+      ],
+      "http_latency": [
+        0.00806283950805664,
+        0.006170511245727539,
+        0.006438016891479492,
+        0.00730443000793457
+      ],
+      "jitter": [],
+      "throughput_samples": [
+        -804.7608864391555,
+        46.80568233810581,
+        0.0
+      ],
+      "errors": [],
+      "average_throughput": 459649.7534246575,
+      "packet_loss_rate": -2.0,
+      "average_packet_size": 14.0
+    },
+    "4": {
+      "stream_id": 4,
+      "path": "/text",
+      "duration": 0.000152587890625,
+      "bytes_sent": 30,
+      "bytes_received": 25,
+      "packets_sent": 1,
+      "packets_received": 3,
+      "retransmissions": 0,
+      "quic_latency": [
+        0.0252077579498291,
+        0.04683279991149902,
+        0.07044410705566406
+      ],
+      "http_latency": [
+        0.008312463760375977,
+        0.006584644317626953,
+        0.006256818771362305,
+        0.006086111068725586
+      ],
+      "jitter": [],
+      "throughput_samples": [
+        -917.6947707879491,
+        92.48536967211308,
+        0.0
+      ],
+      "errors": [],
+      "average_throughput": 360448.0,
+      "packet_loss_rate": -2.0,
+      "average_packet_size": 13.75
+    },
+    "8": {
+      "stream_id": 8,
+      "path": "/control",
+      "duration": 0.0001316070556640625,
+      "bytes_sent": 30,
+      "bytes_received": 20,
+      "packets_sent": 1,
+      "packets_received": 2,
+      "retransmissions": 0,
+      "quic_latency": [
+        0.02331709861755371,
+        0.04465293884277344
+      ],
+      "http_latency": [
+        0.00708317756652832,
+        0.005883216857910156,
+        0.006140947341918945
+      ],
+      "jitter": [],
+      "throughput_samples": [
+        -862.6350211838262,
+        0.0
+      ],
+      "errors": [],
+      "average_throughput": 379918.84057971014,
+      "packet_loss_rate": -1.0,
+      "average_packet_size": 16.666666666666668
+    }
+  },
+  "connection_metrics": {
+    "start_time": 1747495818.3942816,
+    "connection_establishment_time": 0.022986173629760742,
+    "streams": [
+      0,
+      8,
+      4
+    ],
+    "total_bytes_sent": 259,
+    "total_bytes_received": 71,
+    "total_packets_sent": 17,
+    "total_packets_received": 8,
+    "stream_establishment_times": [
+      0.027350902557373047,
+      0.02514934539794922,
+      0.02325725555419922,
+      0.04873204231262207,
+      0.046769142150878906,
+      0.04459547996520996,
+      0.07126140594482422,
+      0.0703587532043457
+    ],
+    "errors": []
+  },
+  "uptime": 8.926874876022339,
+  "timestamp": "20250517_163027"
+}

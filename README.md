@@ -112,6 +112,131 @@ The system logs TLS session keys to enable Wireshark decryption of QUIC traffic:
                                    └──────────────┘              └──────────────┘
 ```
 
+## Performance Evaluation
+
+The system provides comprehensive performance metrics for QUIC stream multiplexing and routing. Performance data is saved in timestamped directories under `results/` with detailed analysis in both JSON and human-readable formats.
+
+### Metrics Collected
+
+1. **Connection Metrics**
+   - Connection establishment time (0-RTT/1-RTT handshake)
+   - Total streams established
+   - Total bytes transferred
+   - Total packets sent/received
+   - Stream establishment times
+   - Error tracking
+
+2. **Per-Stream Metrics**
+   - Duration
+   - Bytes sent/received
+   - Packets sent/received
+   - Retransmissions
+   - QUIC latency (protocol processing time)
+   - HTTP latency (proxy-to-backend time)
+   - Throughput samples
+   - Packet loss rate
+   - Average packet size
+   - Jitter (for video streams)
+
+### Performance Report Structure
+
+The system generates two main output files:
+
+1. **quic_metrics.json**
+   - Raw metrics data in JSON format
+   - Detailed stream-level statistics
+   - Connection-level metrics
+   - Timestamp and uptime information
+
+2. **quic_performance_report.txt**
+   - Human-readable performance analysis
+   - Connection establishment analysis
+   - Overall statistics
+   - Detailed stream analysis
+   - Error summaries
+
+### Key Performance Indicators
+
+1. **Connection Performance**
+   - Connection setup time (typically 20-30ms)
+   - Stream establishment time (20-70ms per stream)
+   - Maximum concurrent streams
+   - Stream establishment rate
+
+2. **Stream Performance**
+   - QUIC latency: Measures protocol processing time
+   - HTTP latency: Measures proxy-to-backend communication
+   - Throughput: Bytes per second
+   - Packet statistics: Loss rate, retransmissions
+   - Stream type analysis (video/text/control)
+
+3. **Error Analysis**
+   - Connection errors
+   - Stream-level errors
+   - Backend service errors
+
+### Performance Monitoring
+
+The system includes real-time performance monitoring:
+
+1. **Periodic Metrics Saving**
+   - Metrics saved every 60 seconds
+   - Automatic cleanup on shutdown
+   - Timestamped results for comparison
+
+2. **Packet Capture**
+   - Automatic tcpdump capture
+   - Wireshark decryption support
+   - Packet-level analysis
+
+### Performance Optimization
+
+The system implements several optimizations:
+
+1. **Stream Processing**
+   - Batch processing of stream data
+   - Efficient stream demultiplexing
+   - Connection pooling for HTTP requests
+
+2. **Resource Management**
+   - Reduced idle timeout (5 seconds)
+   - Efficient memory usage
+   - Proper cleanup of resources
+
+3. **Error Handling**
+   - Comprehensive error tracking
+   - Graceful error recovery
+   - Detailed error reporting
+
+### Performance Analysis Tools
+
+1. **Wireshark Integration**
+   - TLS key logging for decryption
+   - Packet-level analysis
+   - Protocol debugging
+
+2. **Metrics Visualization**
+   - JSON format for programmatic analysis
+   - Human-readable reports
+   - Error summaries
+
+### Best Practices
+
+1. **Testing**
+   - Run multiple concurrent streams
+   - Monitor packet capture
+   - Check error logs
+
+2. **Optimization**
+   - Monitor connection establishment time
+   - Track stream latency
+   - Analyze packet loss
+
+3. **Troubleshooting**
+   - Check performance reports
+   - Analyze error summaries
+   - Monitor resource usage
+
 ## TLS Key Logging
 
 The system implements TLS key logging for QUIC traffic decryption:

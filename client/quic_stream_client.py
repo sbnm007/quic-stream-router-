@@ -60,9 +60,7 @@ async def send_streams(host, port):
                         h3_conn.send_data(stream_id, chunks[i], end_stream=(i == len(chunks) - 1))
                         print(f"[→] Sent chunk {i+1}/{len(chunks)} to {path} (stream {stream_id})")
                 client.transmit()
-                await asyncio.sleep(1)
 
-            await asyncio.sleep(2)
     finally:
         keylog_file.flush()
         keylog_file.close()

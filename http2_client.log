@@ -1,0 +1,1348 @@
+2025-05-17 17:33:02,276 [DEBUG] Using selector: EpollSelector
+2025-05-17 17:33:02,277 [INFO] === Testing HTTP/2 without TLS ===
+2025-05-17 17:33:02,277 [INFO] Connecting to localhost:8080 without TLS
+2025-05-17 17:33:02,277 [DEBUG] TCP connection established
+2025-05-17 17:33:02,277 [DEBUG] Sending connection preface: 75 bytes
+2025-05-17 17:33:02,278 [DEBUG] Connection preface sent successfully
+2025-05-17 17:33:02,278 [DEBUG] Waiting for server data...
+2025-05-17 17:33:02,279 [DEBUG] Received 51 bytes during setup
+2025-05-17 17:33:02,279 [DEBUG] Raw data: 00002a04000000000000010000100000020000000000040000ffff000500004000000800000000000300000064000600010000
+2025-05-17 17:33:02,279 [DEBUG] Resizing header table to 4096 from 4096
+2025-05-17 17:33:02,279 [DEBUG] Processing 1 events during setup
+2025-05-17 17:33:02,279 [DEBUG] Setup event type: RemoteSettingsChanged
+2025-05-17 17:33:02,279 [INFO] Received settings: {<SettingCodes.HEADER_TABLE_SIZE: 1>: ChangedSetting(setting=1, original_value=4096, new_value=4096), <SettingCodes.ENABLE_PUSH: 2>: ChangedSetting(setting=2, original_value=0, new_value=0), <SettingCodes.INITIAL_WINDOW_SIZE: 4>: ChangedSetting(setting=4, original_value=65535, new_value=65535), <SettingCodes.MAX_FRAME_SIZE: 5>: ChangedSetting(setting=5, original_value=16384, new_value=16384), <SettingCodes.ENABLE_CONNECT_PROTOCOL: 8>: ChangedSetting(setting=8, original_value=0, new_value=0), <SettingCodes.MAX_CONCURRENT_STREAMS: 3>: ChangedSetting(setting=3, original_value=None, new_value=100), <SettingCodes.MAX_HEADER_LIST_SIZE: 6>: ChangedSetting(setting=6, original_value=None, new_value=65536)}
+2025-05-17 17:33:02,279 [INFO] HTTP/2 connection established
+2025-05-17 17:33:02,279 [INFO] Sending request on stream 1 to /video
+2025-05-17 17:33:02,279 [DEBUG] Headers for stream 1: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '22')]
+2025-05-17 17:33:02,280 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,280 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:33:02,280 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,280 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:33:02,280 [DEBUG] Encoding 5 with 7 bits
+2025-05-17 17:33:02,280 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,280 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:33:02,280 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,280 [DEBUG] Encoding 1 with 6 bits
+2025-05-17 17:33:02,280 [DEBUG] Encoding 10 with 7 bits
+2025-05-17 17:33:02,280 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,280 [DEBUG] Encoding 31 with 6 bits
+2025-05-17 17:33:02,280 [DEBUG] Encoding 16 with 7 bits
+2025-05-17 17:33:02,280 [DEBUG] Adding (b'content-length', b'22') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,280 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:33:02,280 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:33:02,280 [DEBUG] Encoded header block to b'\x83D\x85c\xb9\xa4)\xff\x86A\x8a\xa0\xe4\x1d\x13\x9d\t\xb8\xf0\x1e\x07_\x90\x1du\xd0b\r&=L\x1c\x89*VBl(\xe9\\\x82\x10\xbf'
+2025-05-17 17:33:02,281 [DEBUG] Sending 22 bytes on stream 1
+2025-05-17 17:33:02,281 [DEBUG] Sending 92 bytes of pending data
+2025-05-17 17:33:02,281 [INFO] Request sent on stream 1 to /video
+2025-05-17 17:33:02,281 [INFO] Sending request on stream 3 to /video
+2025-05-17 17:33:02,281 [DEBUG] Headers for stream 3: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '22')]
+2025-05-17 17:33:02,281 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,281 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:33:02,281 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,281 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:33:02,281 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,281 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:33:02,281 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,281 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:33:02,282 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,282 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:33:02,282 [DEBUG] Adding (b'content-length', b'22') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,282 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:33:02,282 [DEBUG] Encoded header block to b'\x83\xc1\x86\xc0\xbf\xbe'
+2025-05-17 17:33:02,282 [DEBUG] Sending 22 bytes on stream 3
+2025-05-17 17:33:02,282 [DEBUG] Sending 46 bytes of pending data
+2025-05-17 17:33:02,282 [INFO] Request sent on stream 3 to /video
+2025-05-17 17:33:02,282 [INFO] Sending request on stream 5 to /video
+2025-05-17 17:33:02,282 [DEBUG] Headers for stream 5: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '22')]
+2025-05-17 17:33:02,282 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,282 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:33:02,282 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,282 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:33:02,283 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,283 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:33:02,283 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,283 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:33:02,283 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,283 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:33:02,283 [DEBUG] Adding (b'content-length', b'22') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,283 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:33:02,283 [DEBUG] Encoded header block to b'\x83\xc1\x86\xc0\xbf\xbe'
+2025-05-17 17:33:02,283 [DEBUG] Sending 22 bytes on stream 5
+2025-05-17 17:33:02,283 [DEBUG] Sending 46 bytes of pending data
+2025-05-17 17:33:02,283 [INFO] Request sent on stream 5 to /video
+2025-05-17 17:33:02,283 [INFO] Sending request on stream 7 to /text
+2025-05-17 17:33:02,283 [DEBUG] Headers for stream 7: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '21')]
+2025-05-17 17:33:02,283 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,283 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:33:02,283 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,284 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:33:02,284 [DEBUG] Encoding 4 with 7 bits
+2025-05-17 17:33:02,284 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,284 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:33:02,284 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,284 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:33:02,284 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,284 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:33:02,284 [DEBUG] Adding (b'content-length', b'21') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,284 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:33:02,284 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:33:02,284 [DEBUG] Encoded header block to b'\x83D\x84a%\xf2\x9f\x86\xc1\xc0\\\x82\x10\x7f'
+2025-05-17 17:33:02,284 [DEBUG] Sending 21 bytes on stream 7
+2025-05-17 17:33:02,284 [DEBUG] Sending 53 bytes of pending data
+2025-05-17 17:33:02,284 [INFO] Request sent on stream 7 to /text
+2025-05-17 17:33:02,284 [INFO] Sending request on stream 9 to /text
+2025-05-17 17:33:02,284 [DEBUG] Headers for stream 9: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '21')]
+2025-05-17 17:33:02,285 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,285 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:33:02,285 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,285 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:33:02,285 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,285 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:33:02,285 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,285 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:33:02,285 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,285 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:33:02,285 [DEBUG] Adding (b'content-length', b'21') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,285 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:33:02,285 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc2\xc1\xbe'
+2025-05-17 17:33:02,285 [DEBUG] Sending 21 bytes on stream 9
+2025-05-17 17:33:02,285 [DEBUG] Sending 45 bytes of pending data
+2025-05-17 17:33:02,285 [INFO] Request sent on stream 9 to /text
+2025-05-17 17:33:02,285 [INFO] Sending request on stream 11 to /text
+2025-05-17 17:33:02,285 [DEBUG] Headers for stream 11: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '21')]
+2025-05-17 17:33:02,286 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,286 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:33:02,286 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,286 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:33:02,286 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,286 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:33:02,286 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,286 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:33:02,286 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,286 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:33:02,286 [DEBUG] Adding (b'content-length', b'21') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,286 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:33:02,286 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc2\xc1\xbe'
+2025-05-17 17:33:02,286 [DEBUG] Sending 21 bytes on stream 11
+2025-05-17 17:33:02,286 [DEBUG] Sending 45 bytes of pending data
+2025-05-17 17:33:02,286 [INFO] Request sent on stream 11 to /text
+2025-05-17 17:33:02,286 [INFO] Sending request on stream 13 to /control
+2025-05-17 17:33:02,286 [DEBUG] Headers for stream 13: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:33:02,287 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,287 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:33:02,287 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,287 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:33:02,287 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:33:02,287 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,287 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:33:02,287 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,287 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:33:02,287 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,287 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:33:02,287 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,287 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:33:02,287 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:33:02,287 [DEBUG] Encoded header block to b'\x83D\x86`\x87\xa96\x1e\x8f\x86\xc3\xc2\\\x82\x13_'
+2025-05-17 17:33:02,288 [DEBUG] Sending 24 bytes on stream 13
+2025-05-17 17:33:02,288 [DEBUG] Sending 58 bytes of pending data
+2025-05-17 17:33:02,288 [INFO] Request sent on stream 13 to /control
+2025-05-17 17:33:02,288 [INFO] Sending request on stream 15 to /control
+2025-05-17 17:33:02,288 [DEBUG] Headers for stream 15: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:33:02,288 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,288 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:33:02,288 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,288 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:33:02,288 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,288 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:33:02,288 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,288 [DEBUG] Encoding 68 with 7 bits
+2025-05-17 17:33:02,288 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,288 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:33:02,288 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,288 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:33:02,288 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc4\xc3\xbe'
+2025-05-17 17:33:02,289 [DEBUG] Sending 24 bytes on stream 15
+2025-05-17 17:33:02,289 [DEBUG] Sending 48 bytes of pending data
+2025-05-17 17:33:02,289 [INFO] Request sent on stream 15 to /control
+2025-05-17 17:33:02,289 [INFO] Sending request on stream 17 to /control
+2025-05-17 17:33:02,289 [DEBUG] Headers for stream 17: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:33:02,289 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,289 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:33:02,289 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,289 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:33:02,289 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,289 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:33:02,289 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,289 [DEBUG] Encoding 68 with 7 bits
+2025-05-17 17:33:02,289 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,289 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:33:02,289 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:33:02,290 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:33:02,290 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc4\xc3\xbe'
+2025-05-17 17:33:02,290 [DEBUG] Sending 24 bytes on stream 17
+2025-05-17 17:33:02,290 [DEBUG] Sending 48 bytes of pending data
+2025-05-17 17:33:02,290 [INFO] Request sent on stream 17 to /control
+2025-05-17 17:33:02,290 [INFO] Starting receive loop
+2025-05-17 17:33:02,290 [DEBUG] Received 9 bytes
+2025-05-17 17:33:02,290 [DEBUG] Processing 1 events
+2025-05-17 17:33:02,290 [DEBUG] Event type: SettingsAcknowledged
+2025-05-17 17:33:02,295 [DEBUG] Received 57 bytes
+2025-05-17 17:33:02,295 [DEBUG] Decoding b'\x88_\x92I|\xa5\x89\xd3M\x1fj\x12q\xd8\x82\xa6\x0bS*\xcf\x7f\\\x82\x0b_'
+2025-05-17 17:33:02,295 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:33:02,295 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:33:02,295 [DEBUG] Decoded 31, consumed 1 bytes
+2025-05-17 17:33:02,296 [DEBUG] Decoded 18, consumed 1 bytes
+2025-05-17 17:33:02,296 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), total consumed 20 bytes, indexed True
+2025-05-17 17:33:02,296 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:33:02,296 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:33:02,296 [DEBUG] Decoded (b'content-length', b'14'), total consumed 4 bytes, indexed True
+2025-05-17 17:33:02,296 [DEBUG] Processing 3 events
+2025-05-17 17:33:02,296 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:33:02,296 [DEBUG] Event type: DataReceived
+2025-05-17 17:33:02,296 [DEBUG] Received data on stream 1: 14 bytes
+2025-05-17 17:33:02,296 [DEBUG] Event type: StreamEnded
+2025-05-17 17:33:02,296 [INFO] Stream 1 ended
+2025-05-17 17:33:02,364 [DEBUG] Received 289 bytes
+2025-05-17 17:33:02,364 [DEBUG] Decoding b'\x88\xbf\xbe'
+2025-05-17 17:33:02,364 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:33:02,364 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:33:02,364 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:33:02,365 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:33:02,365 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:33:02,365 [DEBUG] Decoded (b'content-length', b'14'), consumed 1
+2025-05-17 17:33:02,365 [DEBUG] Decoding b'\x88\xbf\xbe'
+2025-05-17 17:33:02,365 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:33:02,365 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:33:02,365 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:33:02,365 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:33:02,365 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:33:02,365 [DEBUG] Decoded (b'content-length', b'14'), consumed 1
+2025-05-17 17:33:02,365 [DEBUG] Decoding b'\x88\xbf\\\x82\x0b?'
+2025-05-17 17:33:02,366 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:33:02,366 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:33:02,366 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:33:02,366 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:33:02,366 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:33:02,366 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:33:02,366 [DEBUG] Decoded (b'content-length', b'13'), total consumed 4 bytes, indexed True
+2025-05-17 17:33:02,366 [DEBUG] Decoding b'\x88\xc0\xbe'
+2025-05-17 17:33:02,366 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:33:02,366 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:33:02,366 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:33:02,366 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:33:02,366 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:33:02,367 [DEBUG] Decoded (b'content-length', b'13'), consumed 1
+2025-05-17 17:33:02,367 [DEBUG] Decoding b'\x88\xc0\xbe'
+2025-05-17 17:33:02,367 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:33:02,367 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:33:02,367 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:33:02,367 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:33:02,367 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:33:02,367 [DEBUG] Decoded (b'content-length', b'13'), consumed 1
+2025-05-17 17:33:02,367 [DEBUG] Decoding b'\x88\xc0\\\x82\x0b\x9f'
+2025-05-17 17:33:02,367 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:33:02,367 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:33:02,368 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:33:02,368 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:33:02,368 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:33:02,368 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:33:02,368 [DEBUG] Decoded (b'content-length', b'16'), total consumed 4 bytes, indexed True
+2025-05-17 17:33:02,368 [DEBUG] Decoding b'\x88\xc1\xbe'
+2025-05-17 17:33:02,368 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:33:02,368 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:33:02,368 [DEBUG] Decoded 65, consumed 1 bytes
+2025-05-17 17:33:02,368 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:33:02,368 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:33:02,368 [DEBUG] Decoded (b'content-length', b'16'), consumed 1
+2025-05-17 17:33:02,368 [DEBUG] Decoding b'\x88\xc1\xbe'
+2025-05-17 17:33:02,369 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:33:02,369 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:33:02,369 [DEBUG] Decoded 65, consumed 1 bytes
+2025-05-17 17:33:02,369 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:33:02,369 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:33:02,369 [DEBUG] Decoded (b'content-length', b'16'), consumed 1
+2025-05-17 17:33:02,369 [DEBUG] Processing 24 events
+2025-05-17 17:33:02,369 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:33:02,369 [DEBUG] Event type: DataReceived
+2025-05-17 17:33:02,369 [DEBUG] Received data on stream 3: 14 bytes
+2025-05-17 17:33:02,369 [DEBUG] Event type: StreamEnded
+2025-05-17 17:33:02,369 [INFO] Stream 3 ended
+2025-05-17 17:33:02,369 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:33:02,369 [DEBUG] Event type: DataReceived
+2025-05-17 17:33:02,369 [DEBUG] Received data on stream 5: 14 bytes
+2025-05-17 17:33:02,369 [DEBUG] Event type: StreamEnded
+2025-05-17 17:33:02,369 [INFO] Stream 5 ended
+2025-05-17 17:33:02,369 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:33:02,369 [DEBUG] Event type: DataReceived
+2025-05-17 17:33:02,370 [DEBUG] Received data on stream 7: 13 bytes
+2025-05-17 17:33:02,370 [DEBUG] Event type: StreamEnded
+2025-05-17 17:33:02,370 [INFO] Stream 7 ended
+2025-05-17 17:33:02,370 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:33:02,370 [DEBUG] Event type: DataReceived
+2025-05-17 17:33:02,370 [DEBUG] Received data on stream 9: 13 bytes
+2025-05-17 17:33:02,370 [DEBUG] Event type: StreamEnded
+2025-05-17 17:33:02,370 [INFO] Stream 9 ended
+2025-05-17 17:33:02,370 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:33:02,370 [DEBUG] Event type: DataReceived
+2025-05-17 17:33:02,370 [DEBUG] Received data on stream 11: 13 bytes
+2025-05-17 17:33:02,370 [DEBUG] Event type: StreamEnded
+2025-05-17 17:33:02,370 [INFO] Stream 11 ended
+2025-05-17 17:33:02,370 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:33:02,370 [DEBUG] Event type: DataReceived
+2025-05-17 17:33:02,370 [DEBUG] Received data on stream 13: 16 bytes
+2025-05-17 17:33:02,370 [DEBUG] Event type: StreamEnded
+2025-05-17 17:33:02,370 [INFO] Stream 13 ended
+2025-05-17 17:33:02,370 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:33:02,370 [DEBUG] Event type: DataReceived
+2025-05-17 17:33:02,370 [DEBUG] Received data on stream 15: 16 bytes
+2025-05-17 17:33:02,370 [DEBUG] Event type: StreamEnded
+2025-05-17 17:33:02,371 [INFO] Stream 15 ended
+2025-05-17 17:33:02,371 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:33:02,371 [DEBUG] Event type: DataReceived
+2025-05-17 17:33:02,371 [DEBUG] Received data on stream 17: 16 bytes
+2025-05-17 17:33:02,371 [DEBUG] Event type: StreamEnded
+2025-05-17 17:33:02,371 [INFO] Stream 17 ended
+2025-05-17 17:33:35,594 [INFO] Connection closed by server
+2025-05-17 17:33:35,595 [INFO] Receive loop ended
+2025-05-17 17:33:35,595 [INFO] Received response for /video: Video received
+2025-05-17 17:33:35,595 [INFO] Received response for /video: Video received
+2025-05-17 17:33:35,595 [INFO] Received response for /video: Video received
+2025-05-17 17:33:35,596 [INFO] Received response for /text: Text received
+2025-05-17 17:33:35,596 [INFO] Received response for /text: Text received
+2025-05-17 17:33:35,596 [INFO] Received response for /text: Text received
+2025-05-17 17:33:35,596 [INFO] Received response for /control: Control received
+2025-05-17 17:33:35,596 [INFO] Received response for /control: Control received
+2025-05-17 17:33:35,596 [INFO] Received response for /control: Control received
+2025-05-17 17:33:35,597 [INFO] === Testing HTTP/2 with TLS ===
+2025-05-17 17:33:35,597 [INFO] Connecting to localhost:8443 with TLS
+2025-05-17 17:37:37,381 [DEBUG] Using selector: EpollSelector
+2025-05-17 17:37:37,381 [INFO] === Testing HTTP/2 without TLS ===
+2025-05-17 17:37:37,381 [INFO] Connecting to localhost:8080 without TLS
+2025-05-17 17:37:37,382 [DEBUG] TCP connection established
+2025-05-17 17:37:37,382 [DEBUG] Sending connection preface: 75 bytes
+2025-05-17 17:37:37,382 [DEBUG] Connection preface sent successfully
+2025-05-17 17:37:37,382 [DEBUG] Waiting for server data...
+2025-05-17 17:37:37,383 [DEBUG] Received 51 bytes during setup
+2025-05-17 17:37:37,383 [DEBUG] Raw data: 00002a04000000000000010000100000020000000000040000ffff000500004000000800000000000300000064000600010000
+2025-05-17 17:37:37,383 [DEBUG] Resizing header table to 4096 from 4096
+2025-05-17 17:37:37,383 [DEBUG] Processing 1 events during setup
+2025-05-17 17:37:37,383 [DEBUG] Setup event type: RemoteSettingsChanged
+2025-05-17 17:37:37,383 [INFO] Received settings: {<SettingCodes.HEADER_TABLE_SIZE: 1>: ChangedSetting(setting=1, original_value=4096, new_value=4096), <SettingCodes.ENABLE_PUSH: 2>: ChangedSetting(setting=2, original_value=0, new_value=0), <SettingCodes.INITIAL_WINDOW_SIZE: 4>: ChangedSetting(setting=4, original_value=65535, new_value=65535), <SettingCodes.MAX_FRAME_SIZE: 5>: ChangedSetting(setting=5, original_value=16384, new_value=16384), <SettingCodes.ENABLE_CONNECT_PROTOCOL: 8>: ChangedSetting(setting=8, original_value=0, new_value=0), <SettingCodes.MAX_CONCURRENT_STREAMS: 3>: ChangedSetting(setting=3, original_value=None, new_value=100), <SettingCodes.MAX_HEADER_LIST_SIZE: 6>: ChangedSetting(setting=6, original_value=None, new_value=65536)}
+2025-05-17 17:37:37,383 [INFO] HTTP/2 connection established
+2025-05-17 17:37:37,383 [INFO] Sending request on stream 1 to /video
+2025-05-17 17:37:37,383 [DEBUG] Headers for stream 1: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '28')]
+2025-05-17 17:37:37,384 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,384 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:37:37,384 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,384 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:37:37,384 [DEBUG] Encoding 5 with 7 bits
+2025-05-17 17:37:37,384 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,384 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:37:37,384 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,384 [DEBUG] Encoding 1 with 6 bits
+2025-05-17 17:37:37,384 [DEBUG] Encoding 10 with 7 bits
+2025-05-17 17:37:37,384 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,384 [DEBUG] Encoding 31 with 6 bits
+2025-05-17 17:37:37,384 [DEBUG] Encoding 16 with 7 bits
+2025-05-17 17:37:37,384 [DEBUG] Adding (b'content-length', b'28') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,384 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:37:37,384 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:37:37,384 [DEBUG] Encoded header block to b'\x83D\x85c\xb9\xa4)\xff\x86A\x8a\xa0\xe4\x1d\x13\x9d\t\xb8\xf0\x1e\x07_\x90\x1du\xd0b\r&=L\x1c\x89*VBl(\xe9\\\x82\x13\xdf'
+2025-05-17 17:37:37,384 [DEBUG] Sending 8 bytes on stream 1
+2025-05-17 17:37:37,385 [DEBUG] Sending 6 bytes on stream 1
+2025-05-17 17:37:37,385 [DEBUG] Sending 7 bytes on stream 1
+2025-05-17 17:37:37,385 [DEBUG] Sending 7 bytes on stream 1
+2025-05-17 17:37:37,385 [INFO] Request sent on stream 1 to /video
+2025-05-17 17:37:37,385 [INFO] Request sent on stream 1 to /video
+2025-05-17 17:37:37,385 [INFO] Sending request on stream 3 to /video
+2025-05-17 17:37:37,385 [DEBUG] Headers for stream 3: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '28')]
+2025-05-17 17:37:37,385 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,385 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:37:37,385 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,385 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:37:37,385 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,385 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:37:37,385 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,385 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:37:37,385 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,385 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:37:37,385 [DEBUG] Adding (b'content-length', b'28') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,385 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:37:37,386 [DEBUG] Encoded header block to b'\x83\xc1\x86\xc0\xbf\xbe'
+2025-05-17 17:37:37,386 [DEBUG] Sending 8 bytes on stream 3
+2025-05-17 17:37:37,386 [DEBUG] Sending 6 bytes on stream 3
+2025-05-17 17:37:37,386 [DEBUG] Sending 7 bytes on stream 3
+2025-05-17 17:37:37,386 [DEBUG] Sending 7 bytes on stream 3
+2025-05-17 17:37:37,386 [INFO] Request sent on stream 3 to /video
+2025-05-17 17:37:37,386 [INFO] Request sent on stream 3 to /video
+2025-05-17 17:37:37,386 [INFO] Sending request on stream 5 to /video
+2025-05-17 17:37:37,386 [DEBUG] Headers for stream 5: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '28')]
+2025-05-17 17:37:37,386 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,386 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:37:37,386 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,386 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:37:37,386 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,386 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:37:37,386 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,386 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:37:37,386 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,386 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:37:37,386 [DEBUG] Adding (b'content-length', b'28') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,387 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:37:37,387 [DEBUG] Encoded header block to b'\x83\xc1\x86\xc0\xbf\xbe'
+2025-05-17 17:37:37,387 [DEBUG] Sending 8 bytes on stream 5
+2025-05-17 17:37:37,387 [DEBUG] Sending 6 bytes on stream 5
+2025-05-17 17:37:37,387 [DEBUG] Sending 7 bytes on stream 5
+2025-05-17 17:37:37,387 [DEBUG] Sending 7 bytes on stream 5
+2025-05-17 17:37:37,387 [INFO] Request sent on stream 5 to /video
+2025-05-17 17:37:37,387 [INFO] Request sent on stream 5 to /video
+2025-05-17 17:37:37,387 [INFO] Sending request on stream 7 to /text
+2025-05-17 17:37:37,387 [DEBUG] Headers for stream 7: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '27')]
+2025-05-17 17:37:37,387 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,387 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:37:37,388 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,388 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:37:37,388 [DEBUG] Encoding 4 with 7 bits
+2025-05-17 17:37:37,388 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,388 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:37:37,388 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,388 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:37:37,388 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,388 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:37:37,388 [DEBUG] Adding (b'content-length', b'27') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,388 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:37:37,388 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:37:37,388 [DEBUG] Encoded header block to b'\x83D\x84a%\xf2\x9f\x86\xc1\xc0\\\x82\x13\xbf'
+2025-05-17 17:37:37,388 [DEBUG] Sending 8 bytes on stream 7
+2025-05-17 17:37:37,388 [DEBUG] Sending 5 bytes on stream 7
+2025-05-17 17:37:37,389 [DEBUG] Sending 7 bytes on stream 7
+2025-05-17 17:37:37,389 [DEBUG] Sending 7 bytes on stream 7
+2025-05-17 17:37:37,389 [INFO] Request sent on stream 7 to /text
+2025-05-17 17:37:37,389 [INFO] Request sent on stream 7 to /text
+2025-05-17 17:37:37,389 [INFO] Sending request on stream 9 to /text
+2025-05-17 17:37:37,389 [DEBUG] Headers for stream 9: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '27')]
+2025-05-17 17:37:37,389 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,389 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:37:37,389 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,389 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:37:37,389 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,389 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:37:37,389 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,389 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:37:37,390 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,390 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:37:37,390 [DEBUG] Adding (b'content-length', b'27') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,390 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:37:37,390 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc2\xc1\xbe'
+2025-05-17 17:37:37,390 [DEBUG] Sending 8 bytes on stream 9
+2025-05-17 17:37:37,390 [DEBUG] Sending 5 bytes on stream 9
+2025-05-17 17:37:37,390 [DEBUG] Sending 7 bytes on stream 9
+2025-05-17 17:37:37,390 [DEBUG] Sending 7 bytes on stream 9
+2025-05-17 17:37:37,390 [INFO] Request sent on stream 9 to /text
+2025-05-17 17:37:37,390 [INFO] Request sent on stream 9 to /text
+2025-05-17 17:37:37,390 [INFO] Sending request on stream 11 to /text
+2025-05-17 17:37:37,390 [DEBUG] Headers for stream 11: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '27')]
+2025-05-17 17:37:37,391 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,391 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:37:37,391 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,391 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:37:37,391 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,391 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:37:37,391 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,391 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:37:37,391 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,391 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:37:37,391 [DEBUG] Adding (b'content-length', b'27') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,391 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:37:37,391 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc2\xc1\xbe'
+2025-05-17 17:37:37,391 [DEBUG] Sending 8 bytes on stream 11
+2025-05-17 17:37:37,392 [DEBUG] Sending 5 bytes on stream 11
+2025-05-17 17:37:37,392 [DEBUG] Sending 7 bytes on stream 11
+2025-05-17 17:37:37,392 [DEBUG] Sending 7 bytes on stream 11
+2025-05-17 17:37:37,392 [INFO] Request sent on stream 11 to /text
+2025-05-17 17:37:37,392 [INFO] Request sent on stream 11 to /text
+2025-05-17 17:37:37,392 [INFO] Sending request on stream 13 to /control
+2025-05-17 17:37:37,392 [DEBUG] Headers for stream 13: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:37:37,392 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,392 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:37:37,392 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,392 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:37:37,392 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:37:37,393 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,393 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:37:37,393 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,393 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:37:37,393 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,393 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:37:37,393 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,393 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:37:37,393 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:37:37,393 [DEBUG] Encoded header block to b'\x83D\x86`\x87\xa96\x1e\x8f\x86\xc3\xc2\\\x82\x13_'
+2025-05-17 17:37:37,393 [DEBUG] Sending 8 bytes on stream 13
+2025-05-17 17:37:37,393 [DEBUG] Sending 8 bytes on stream 13
+2025-05-17 17:37:37,394 [DEBUG] Sending 8 bytes on stream 13
+2025-05-17 17:37:37,394 [INFO] Request sent on stream 13 to /control
+2025-05-17 17:37:37,394 [INFO] Request sent on stream 13 to /control
+2025-05-17 17:37:37,394 [INFO] Sending request on stream 15 to /control
+2025-05-17 17:37:37,394 [DEBUG] Headers for stream 15: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:37:37,394 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,394 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:37:37,394 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,394 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:37:37,394 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,394 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:37:37,394 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,394 [DEBUG] Encoding 68 with 7 bits
+2025-05-17 17:37:37,394 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,395 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:37:37,395 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,395 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:37:37,395 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc4\xc3\xbe'
+2025-05-17 17:37:37,395 [DEBUG] Sending 8 bytes on stream 15
+2025-05-17 17:37:37,395 [DEBUG] Sending 8 bytes on stream 15
+2025-05-17 17:37:37,395 [DEBUG] Sending 8 bytes on stream 15
+2025-05-17 17:37:37,395 [INFO] Request sent on stream 15 to /control
+2025-05-17 17:37:37,395 [INFO] Request sent on stream 15 to /control
+2025-05-17 17:37:37,395 [INFO] Sending request on stream 17 to /control
+2025-05-17 17:37:37,395 [DEBUG] Headers for stream 17: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:37:37,395 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,395 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:37:37,396 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,396 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:37:37,396 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,396 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:37:37,396 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,396 [DEBUG] Encoding 68 with 7 bits
+2025-05-17 17:37:37,396 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,396 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:37:37,396 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:37:37,396 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:37:37,396 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc4\xc3\xbe'
+2025-05-17 17:37:37,396 [DEBUG] Sending 8 bytes on stream 17
+2025-05-17 17:37:37,396 [DEBUG] Sending 8 bytes on stream 17
+2025-05-17 17:37:37,396 [DEBUG] Sending 8 bytes on stream 17
+2025-05-17 17:37:37,396 [INFO] Request sent on stream 17 to /control
+2025-05-17 17:37:37,397 [INFO] Request sent on stream 17 to /control
+2025-05-17 17:37:37,397 [INFO] Starting receive loop
+2025-05-17 17:37:37,397 [DEBUG] Received 9 bytes
+2025-05-17 17:37:37,397 [DEBUG] Processing 1 events
+2025-05-17 17:37:37,397 [DEBUG] Event type: SettingsAcknowledged
+2025-05-17 17:37:37,397 [DEBUG] Sending 814 bytes
+2025-05-17 17:37:37,468 [DEBUG] Received 346 bytes
+2025-05-17 17:37:37,469 [DEBUG] Decoding b'\x88_\x92I|\xa5\x89\xd3M\x1fj\x12q\xd8\x82\xa6\x0bS*\xcf\x7f\\\x82\x0b_'
+2025-05-17 17:37:37,469 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:37:37,469 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:37:37,469 [DEBUG] Decoded 31, consumed 1 bytes
+2025-05-17 17:37:37,469 [DEBUG] Decoded 18, consumed 1 bytes
+2025-05-17 17:37:37,469 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), total consumed 20 bytes, indexed True
+2025-05-17 17:37:37,469 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:37:37,469 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:37:37,469 [DEBUG] Decoded (b'content-length', b'14'), total consumed 4 bytes, indexed True
+2025-05-17 17:37:37,470 [DEBUG] Decoding b'\x88\xbf\xbe'
+2025-05-17 17:37:37,470 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:37:37,470 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:37:37,470 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:37:37,470 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:37:37,470 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:37:37,470 [DEBUG] Decoded (b'content-length', b'14'), consumed 1
+2025-05-17 17:37:37,471 [DEBUG] Decoding b'\x88\xbf\xbe'
+2025-05-17 17:37:37,471 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:37:37,471 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:37:37,471 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:37:37,471 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:37:37,471 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:37:37,471 [DEBUG] Decoded (b'content-length', b'14'), consumed 1
+2025-05-17 17:37:37,471 [DEBUG] Decoding b'\x88\xbf\\\x82\x0b?'
+2025-05-17 17:37:37,471 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:37:37,471 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:37:37,472 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:37:37,472 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:37:37,472 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:37:37,472 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:37:37,472 [DEBUG] Decoded (b'content-length', b'13'), total consumed 4 bytes, indexed True
+2025-05-17 17:37:37,472 [DEBUG] Decoding b'\x88\xc0\xbe'
+2025-05-17 17:37:37,472 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:37:37,472 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:37:37,472 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:37:37,472 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:37:37,472 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:37:37,473 [DEBUG] Decoded (b'content-length', b'13'), consumed 1
+2025-05-17 17:37:37,473 [DEBUG] Decoding b'\x88\xc0\xbe'
+2025-05-17 17:37:37,473 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:37:37,473 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:37:37,473 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:37:37,473 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:37:37,473 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:37:37,473 [DEBUG] Decoded (b'content-length', b'13'), consumed 1
+2025-05-17 17:37:37,473 [DEBUG] Decoding b'\x88\xc0\\\x82\x0b\x9f'
+2025-05-17 17:37:37,473 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:37:37,473 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:37:37,473 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:37:37,474 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:37:37,474 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:37:37,474 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:37:37,474 [DEBUG] Decoded (b'content-length', b'16'), total consumed 4 bytes, indexed True
+2025-05-17 17:37:37,474 [DEBUG] Decoding b'\x88\xc1\xbe'
+2025-05-17 17:37:37,474 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:37:37,474 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:37:37,474 [DEBUG] Decoded 65, consumed 1 bytes
+2025-05-17 17:37:37,474 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:37:37,474 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:37:37,474 [DEBUG] Decoded (b'content-length', b'16'), consumed 1
+2025-05-17 17:37:37,475 [DEBUG] Decoding b'\x88\xc1\xbe'
+2025-05-17 17:37:37,475 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:37:37,475 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:37:37,475 [DEBUG] Decoded 65, consumed 1 bytes
+2025-05-17 17:37:37,475 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:37:37,475 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:37:37,475 [DEBUG] Decoded (b'content-length', b'16'), consumed 1
+2025-05-17 17:37:37,475 [DEBUG] Processing 27 events
+2025-05-17 17:37:37,475 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:37:37,475 [DEBUG] Event type: DataReceived
+2025-05-17 17:37:37,476 [DEBUG] Received data on stream 1: 14 bytes
+2025-05-17 17:37:37,476 [DEBUG] Event type: StreamEnded
+2025-05-17 17:37:37,476 [INFO] Stream 1 ended
+2025-05-17 17:37:37,476 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:37:37,476 [DEBUG] Event type: DataReceived
+2025-05-17 17:37:37,476 [DEBUG] Received data on stream 3: 14 bytes
+2025-05-17 17:37:37,476 [DEBUG] Event type: StreamEnded
+2025-05-17 17:37:37,476 [INFO] Stream 3 ended
+2025-05-17 17:37:37,476 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:37:37,476 [DEBUG] Event type: DataReceived
+2025-05-17 17:37:37,476 [DEBUG] Received data on stream 5: 14 bytes
+2025-05-17 17:37:37,476 [DEBUG] Event type: StreamEnded
+2025-05-17 17:37:37,476 [INFO] Stream 5 ended
+2025-05-17 17:37:37,476 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:37:37,476 [DEBUG] Event type: DataReceived
+2025-05-17 17:37:37,476 [DEBUG] Received data on stream 7: 13 bytes
+2025-05-17 17:37:37,477 [DEBUG] Event type: StreamEnded
+2025-05-17 17:37:37,477 [INFO] Stream 7 ended
+2025-05-17 17:37:37,477 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:37:37,477 [DEBUG] Event type: DataReceived
+2025-05-17 17:37:37,477 [DEBUG] Received data on stream 9: 13 bytes
+2025-05-17 17:37:37,477 [DEBUG] Event type: StreamEnded
+2025-05-17 17:37:37,477 [INFO] Stream 9 ended
+2025-05-17 17:37:37,477 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:37:37,477 [DEBUG] Event type: DataReceived
+2025-05-17 17:37:37,477 [DEBUG] Received data on stream 11: 13 bytes
+2025-05-17 17:37:37,477 [DEBUG] Event type: StreamEnded
+2025-05-17 17:37:37,477 [INFO] Stream 11 ended
+2025-05-17 17:37:37,477 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:37:37,477 [DEBUG] Event type: DataReceived
+2025-05-17 17:37:37,477 [DEBUG] Received data on stream 13: 16 bytes
+2025-05-17 17:37:37,477 [DEBUG] Event type: StreamEnded
+2025-05-17 17:37:37,477 [INFO] Stream 13 ended
+2025-05-17 17:37:37,478 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:37:37,478 [DEBUG] Event type: DataReceived
+2025-05-17 17:37:37,478 [DEBUG] Received data on stream 15: 16 bytes
+2025-05-17 17:37:37,478 [DEBUG] Event type: StreamEnded
+2025-05-17 17:37:37,478 [INFO] Stream 15 ended
+2025-05-17 17:37:37,478 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:37:37,478 [DEBUG] Event type: DataReceived
+2025-05-17 17:37:37,478 [DEBUG] Received data on stream 17: 16 bytes
+2025-05-17 17:37:37,478 [DEBUG] Event type: StreamEnded
+2025-05-17 17:37:37,478 [INFO] Stream 17 ended
+2025-05-17 17:48:33,591 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<HTTP2Client._receive_loop() done, defined at /home/sibin/Desktop/projects/quic-stream-router-/client/http2_stream_client.py:120> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "/home/sibin/Desktop/projects/quic-stream-router-/client/http2_stream_client.py", line 276, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/sibin/Desktop/projects/quic-stream-router-/client/http2_stream_client.py", line 125, in _receive_loop
+    data = self.sock.recv(65535)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 157, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+2025-05-17 17:48:37,765 [DEBUG] Using selector: EpollSelector
+2025-05-17 17:48:37,765 [INFO] === Testing HTTP/2 without TLS ===
+2025-05-17 17:48:37,765 [INFO] Connecting to localhost:8080 without TLS
+2025-05-17 17:48:37,765 [DEBUG] TCP connection established
+2025-05-17 17:48:37,766 [DEBUG] Sending connection preface: 75 bytes
+2025-05-17 17:48:37,766 [DEBUG] Connection preface sent successfully
+2025-05-17 17:48:37,766 [DEBUG] Waiting for server data...
+2025-05-17 17:48:37,767 [DEBUG] Received 51 bytes during setup
+2025-05-17 17:48:37,767 [DEBUG] Raw data: 00002a04000000000000010000100000020000000000040000ffff000500004000000800000000000300000064000600010000
+2025-05-17 17:48:37,767 [DEBUG] Resizing header table to 4096 from 4096
+2025-05-17 17:48:37,767 [DEBUG] Processing 1 events during setup
+2025-05-17 17:48:37,767 [DEBUG] Setup event type: RemoteSettingsChanged
+2025-05-17 17:48:37,767 [INFO] Received settings: {<SettingCodes.HEADER_TABLE_SIZE: 1>: ChangedSetting(setting=1, original_value=4096, new_value=4096), <SettingCodes.ENABLE_PUSH: 2>: ChangedSetting(setting=2, original_value=0, new_value=0), <SettingCodes.INITIAL_WINDOW_SIZE: 4>: ChangedSetting(setting=4, original_value=65535, new_value=65535), <SettingCodes.MAX_FRAME_SIZE: 5>: ChangedSetting(setting=5, original_value=16384, new_value=16384), <SettingCodes.ENABLE_CONNECT_PROTOCOL: 8>: ChangedSetting(setting=8, original_value=0, new_value=0), <SettingCodes.MAX_CONCURRENT_STREAMS: 3>: ChangedSetting(setting=3, original_value=None, new_value=100), <SettingCodes.MAX_HEADER_LIST_SIZE: 6>: ChangedSetting(setting=6, original_value=None, new_value=65536)}
+2025-05-17 17:48:37,767 [INFO] HTTP/2 connection established
+2025-05-17 17:48:37,767 [INFO] Sending request on stream 1 to /video
+2025-05-17 17:48:37,767 [DEBUG] Headers for stream 1: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '28')]
+2025-05-17 17:48:37,768 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,768 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:48:37,768 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,768 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:48:37,768 [DEBUG] Encoding 5 with 7 bits
+2025-05-17 17:48:37,768 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,768 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:48:37,768 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,768 [DEBUG] Encoding 1 with 6 bits
+2025-05-17 17:48:37,768 [DEBUG] Encoding 10 with 7 bits
+2025-05-17 17:48:37,768 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,768 [DEBUG] Encoding 31 with 6 bits
+2025-05-17 17:48:37,768 [DEBUG] Encoding 16 with 7 bits
+2025-05-17 17:48:37,768 [DEBUG] Adding (b'content-length', b'28') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,768 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:48:37,769 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:48:37,769 [DEBUG] Encoded header block to b'\x83D\x85c\xb9\xa4)\xff\x86A\x8a\xa0\xe4\x1d\x13\x9d\t\xb8\xf0\x1e\x07_\x90\x1du\xd0b\r&=L\x1c\x89*VBl(\xe9\\\x82\x13\xdf'
+2025-05-17 17:48:37,769 [DEBUG] Sending 8 bytes on stream 1
+2025-05-17 17:48:37,769 [DEBUG] Sending 6 bytes on stream 1
+2025-05-17 17:48:37,769 [DEBUG] Sending 7 bytes on stream 1
+2025-05-17 17:48:37,769 [DEBUG] Sending 7 bytes on stream 1
+2025-05-17 17:48:37,769 [INFO] Request sent on stream 1 to /video
+2025-05-17 17:48:37,769 [INFO] Request sent on stream 1 to /video
+2025-05-17 17:48:37,769 [INFO] Sending request on stream 3 to /video
+2025-05-17 17:48:37,769 [DEBUG] Headers for stream 3: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '28')]
+2025-05-17 17:48:37,769 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,769 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:48:37,770 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,770 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:48:37,770 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,770 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:48:37,770 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,770 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:48:37,770 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,770 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:48:37,770 [DEBUG] Adding (b'content-length', b'28') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,770 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:48:37,770 [DEBUG] Encoded header block to b'\x83\xc1\x86\xc0\xbf\xbe'
+2025-05-17 17:48:37,770 [DEBUG] Sending 8 bytes on stream 3
+2025-05-17 17:48:37,770 [DEBUG] Sending 6 bytes on stream 3
+2025-05-17 17:48:37,770 [DEBUG] Sending 7 bytes on stream 3
+2025-05-17 17:48:37,771 [DEBUG] Sending 7 bytes on stream 3
+2025-05-17 17:48:37,771 [INFO] Request sent on stream 3 to /video
+2025-05-17 17:48:37,771 [INFO] Request sent on stream 3 to /video
+2025-05-17 17:48:37,771 [INFO] Sending request on stream 5 to /video
+2025-05-17 17:48:37,771 [DEBUG] Headers for stream 5: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '28')]
+2025-05-17 17:48:37,771 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,771 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:48:37,771 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,771 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:48:37,771 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,771 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:48:37,771 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,771 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:48:37,771 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,771 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:48:37,772 [DEBUG] Adding (b'content-length', b'28') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,772 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:48:37,772 [DEBUG] Encoded header block to b'\x83\xc1\x86\xc0\xbf\xbe'
+2025-05-17 17:48:37,772 [DEBUG] Sending 8 bytes on stream 5
+2025-05-17 17:48:37,772 [DEBUG] Sending 6 bytes on stream 5
+2025-05-17 17:48:37,772 [DEBUG] Sending 7 bytes on stream 5
+2025-05-17 17:48:37,772 [DEBUG] Sending 7 bytes on stream 5
+2025-05-17 17:48:37,772 [INFO] Request sent on stream 5 to /video
+2025-05-17 17:48:37,772 [INFO] Request sent on stream 5 to /video
+2025-05-17 17:48:37,772 [INFO] Sending request on stream 7 to /text
+2025-05-17 17:48:37,772 [DEBUG] Headers for stream 7: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '27')]
+2025-05-17 17:48:37,772 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,772 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:48:37,772 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,773 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:48:37,773 [DEBUG] Encoding 4 with 7 bits
+2025-05-17 17:48:37,773 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,773 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:48:37,773 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,773 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:48:37,773 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,773 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:48:37,773 [DEBUG] Adding (b'content-length', b'27') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,773 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:48:37,773 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:48:37,773 [DEBUG] Encoded header block to b'\x83D\x84a%\xf2\x9f\x86\xc1\xc0\\\x82\x13\xbf'
+2025-05-17 17:48:37,773 [DEBUG] Sending 8 bytes on stream 7
+2025-05-17 17:48:37,773 [DEBUG] Sending 5 bytes on stream 7
+2025-05-17 17:48:37,774 [DEBUG] Sending 7 bytes on stream 7
+2025-05-17 17:48:37,774 [DEBUG] Sending 7 bytes on stream 7
+2025-05-17 17:48:37,774 [INFO] Request sent on stream 7 to /text
+2025-05-17 17:48:37,774 [INFO] Request sent on stream 7 to /text
+2025-05-17 17:48:37,774 [INFO] Sending request on stream 9 to /text
+2025-05-17 17:48:37,774 [DEBUG] Headers for stream 9: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '27')]
+2025-05-17 17:48:37,774 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,774 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:48:37,774 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,774 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:48:37,774 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,774 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:48:37,774 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,774 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:48:37,774 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,774 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:48:37,775 [DEBUG] Adding (b'content-length', b'27') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,775 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:48:37,775 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc2\xc1\xbe'
+2025-05-17 17:48:37,775 [DEBUG] Sending 8 bytes on stream 9
+2025-05-17 17:48:37,775 [DEBUG] Sending 5 bytes on stream 9
+2025-05-17 17:48:37,775 [DEBUG] Sending 7 bytes on stream 9
+2025-05-17 17:48:37,775 [DEBUG] Sending 7 bytes on stream 9
+2025-05-17 17:48:37,775 [INFO] Request sent on stream 9 to /text
+2025-05-17 17:48:37,775 [INFO] Request sent on stream 9 to /text
+2025-05-17 17:48:37,775 [INFO] Sending request on stream 11 to /text
+2025-05-17 17:48:37,775 [DEBUG] Headers for stream 11: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '27')]
+2025-05-17 17:48:37,775 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,775 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:48:37,776 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,776 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:48:37,776 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,776 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:48:37,776 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,776 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:48:37,776 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,776 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:48:37,776 [DEBUG] Adding (b'content-length', b'27') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,776 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:48:37,776 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc2\xc1\xbe'
+2025-05-17 17:48:37,776 [DEBUG] Sending 8 bytes on stream 11
+2025-05-17 17:48:37,776 [DEBUG] Sending 5 bytes on stream 11
+2025-05-17 17:48:37,776 [DEBUG] Sending 7 bytes on stream 11
+2025-05-17 17:48:37,776 [DEBUG] Sending 7 bytes on stream 11
+2025-05-17 17:48:37,777 [INFO] Request sent on stream 11 to /text
+2025-05-17 17:48:37,777 [INFO] Request sent on stream 11 to /text
+2025-05-17 17:48:37,777 [INFO] Sending request on stream 13 to /control
+2025-05-17 17:48:37,777 [DEBUG] Headers for stream 13: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:48:37,777 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,777 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:48:37,777 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,777 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:48:37,777 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:48:37,777 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,777 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:48:37,777 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,777 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:48:37,777 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,777 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:48:37,778 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,778 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:48:37,778 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:48:37,778 [DEBUG] Encoded header block to b'\x83D\x86`\x87\xa96\x1e\x8f\x86\xc3\xc2\\\x82\x13_'
+2025-05-17 17:48:37,778 [DEBUG] Sending 8 bytes on stream 13
+2025-05-17 17:48:37,778 [DEBUG] Sending 8 bytes on stream 13
+2025-05-17 17:48:37,778 [DEBUG] Sending 8 bytes on stream 13
+2025-05-17 17:48:37,778 [INFO] Request sent on stream 13 to /control
+2025-05-17 17:48:37,778 [INFO] Request sent on stream 13 to /control
+2025-05-17 17:48:37,778 [INFO] Sending request on stream 15 to /control
+2025-05-17 17:48:37,778 [DEBUG] Headers for stream 15: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:48:37,778 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,778 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:48:37,778 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,779 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:48:37,779 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,779 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:48:37,779 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,779 [DEBUG] Encoding 68 with 7 bits
+2025-05-17 17:48:37,779 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,779 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:48:37,779 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,779 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:48:37,779 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc4\xc3\xbe'
+2025-05-17 17:48:37,779 [DEBUG] Sending 8 bytes on stream 15
+2025-05-17 17:48:37,779 [DEBUG] Sending 8 bytes on stream 15
+2025-05-17 17:48:37,779 [DEBUG] Sending 8 bytes on stream 15
+2025-05-17 17:48:37,779 [INFO] Request sent on stream 15 to /control
+2025-05-17 17:48:37,779 [INFO] Request sent on stream 15 to /control
+2025-05-17 17:48:37,780 [INFO] Sending request on stream 17 to /control
+2025-05-17 17:48:37,780 [DEBUG] Headers for stream 17: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:48:37,780 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,780 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:48:37,780 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,780 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:48:37,780 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,780 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:48:37,780 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,780 [DEBUG] Encoding 68 with 7 bits
+2025-05-17 17:48:37,780 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,780 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:48:37,780 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:48:37,780 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:48:37,780 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc4\xc3\xbe'
+2025-05-17 17:48:37,781 [DEBUG] Sending 8 bytes on stream 17
+2025-05-17 17:48:37,781 [DEBUG] Sending 8 bytes on stream 17
+2025-05-17 17:48:37,781 [DEBUG] Sending 8 bytes on stream 17
+2025-05-17 17:48:37,781 [INFO] Request sent on stream 17 to /control
+2025-05-17 17:48:37,781 [INFO] Request sent on stream 17 to /control
+2025-05-17 17:48:37,781 [INFO] Starting receive loop
+2025-05-17 17:48:37,781 [DEBUG] Received 9 bytes
+2025-05-17 17:48:37,781 [DEBUG] Processing 1 events
+2025-05-17 17:48:37,781 [DEBUG] Event type: SettingsAcknowledged
+2025-05-17 17:48:37,781 [DEBUG] Sending 814 bytes
+2025-05-17 17:48:37,857 [DEBUG] Received 346 bytes
+2025-05-17 17:48:37,857 [DEBUG] Decoding b'\x88_\x92I|\xa5\x89\xd3M\x1fj\x12q\xd8\x82\xa6\x0bS*\xcf\x7f\\\x82\x0b_'
+2025-05-17 17:48:37,857 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:48:37,857 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:48:37,857 [DEBUG] Decoded 31, consumed 1 bytes
+2025-05-17 17:48:37,857 [DEBUG] Decoded 18, consumed 1 bytes
+2025-05-17 17:48:37,858 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), total consumed 20 bytes, indexed True
+2025-05-17 17:48:37,858 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:48:37,858 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:48:37,858 [DEBUG] Decoded (b'content-length', b'14'), total consumed 4 bytes, indexed True
+2025-05-17 17:48:37,858 [DEBUG] Decoding b'\x88\xbf\xbe'
+2025-05-17 17:48:37,858 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:48:37,858 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:48:37,859 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:48:37,859 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:48:37,859 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:48:37,859 [DEBUG] Decoded (b'content-length', b'14'), consumed 1
+2025-05-17 17:48:37,859 [DEBUG] Decoding b'\x88\xbf\xbe'
+2025-05-17 17:48:37,859 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:48:37,859 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:48:37,859 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:48:37,859 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:48:37,859 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:48:37,859 [DEBUG] Decoded (b'content-length', b'14'), consumed 1
+2025-05-17 17:48:37,860 [DEBUG] Decoding b'\x88\xbf\\\x82\x0b?'
+2025-05-17 17:48:37,860 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:48:37,860 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:48:37,860 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:48:37,860 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:48:37,860 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:48:37,860 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:48:37,860 [DEBUG] Decoded (b'content-length', b'13'), total consumed 4 bytes, indexed True
+2025-05-17 17:48:37,861 [DEBUG] Decoding b'\x88\xc0\xbe'
+2025-05-17 17:48:37,861 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:48:37,861 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:48:37,861 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:48:37,861 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:48:37,861 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:48:37,861 [DEBUG] Decoded (b'content-length', b'13'), consumed 1
+2025-05-17 17:48:37,861 [DEBUG] Decoding b'\x88\xc0\xbe'
+2025-05-17 17:48:37,862 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:48:37,862 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:48:37,862 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:48:37,862 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:48:37,862 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:48:37,862 [DEBUG] Decoded (b'content-length', b'13'), consumed 1
+2025-05-17 17:48:37,862 [DEBUG] Decoding b'\x88\xc0\\\x82\x0b\x9f'
+2025-05-17 17:48:37,862 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:48:37,863 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:48:37,863 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:48:37,863 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:48:37,863 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:48:37,863 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:48:37,863 [DEBUG] Decoded (b'content-length', b'16'), total consumed 4 bytes, indexed True
+2025-05-17 17:48:37,863 [DEBUG] Decoding b'\x88\xc1\xbe'
+2025-05-17 17:48:37,863 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:48:37,863 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:48:37,864 [DEBUG] Decoded 65, consumed 1 bytes
+2025-05-17 17:48:37,864 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:48:37,864 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:48:37,864 [DEBUG] Decoded (b'content-length', b'16'), consumed 1
+2025-05-17 17:48:37,864 [DEBUG] Decoding b'\x88\xc1\xbe'
+2025-05-17 17:48:37,864 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:48:37,864 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:48:37,864 [DEBUG] Decoded 65, consumed 1 bytes
+2025-05-17 17:48:37,864 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:48:37,865 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:48:37,865 [DEBUG] Decoded (b'content-length', b'16'), consumed 1
+2025-05-17 17:48:37,865 [DEBUG] Processing 27 events
+2025-05-17 17:48:37,865 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:48:37,865 [DEBUG] Event type: DataReceived
+2025-05-17 17:48:37,865 [DEBUG] Received data on stream 1: 14 bytes
+2025-05-17 17:48:37,865 [DEBUG] Event type: StreamEnded
+2025-05-17 17:48:37,865 [INFO] Stream 1 ended
+2025-05-17 17:48:37,865 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:48:37,865 [DEBUG] Event type: DataReceived
+2025-05-17 17:48:37,865 [DEBUG] Received data on stream 3: 14 bytes
+2025-05-17 17:48:37,865 [DEBUG] Event type: StreamEnded
+2025-05-17 17:48:37,865 [INFO] Stream 3 ended
+2025-05-17 17:48:37,866 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:48:37,866 [DEBUG] Event type: DataReceived
+2025-05-17 17:48:37,866 [DEBUG] Received data on stream 5: 14 bytes
+2025-05-17 17:48:37,866 [DEBUG] Event type: StreamEnded
+2025-05-17 17:48:37,866 [INFO] Stream 5 ended
+2025-05-17 17:48:37,866 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:48:37,866 [DEBUG] Event type: DataReceived
+2025-05-17 17:48:37,866 [DEBUG] Received data on stream 7: 13 bytes
+2025-05-17 17:48:37,866 [DEBUG] Event type: StreamEnded
+2025-05-17 17:48:37,866 [INFO] Stream 7 ended
+2025-05-17 17:48:37,866 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:48:37,866 [DEBUG] Event type: DataReceived
+2025-05-17 17:48:37,866 [DEBUG] Received data on stream 9: 13 bytes
+2025-05-17 17:48:37,866 [DEBUG] Event type: StreamEnded
+2025-05-17 17:48:37,867 [INFO] Stream 9 ended
+2025-05-17 17:48:37,867 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:48:37,867 [DEBUG] Event type: DataReceived
+2025-05-17 17:48:37,867 [DEBUG] Received data on stream 11: 13 bytes
+2025-05-17 17:48:37,867 [DEBUG] Event type: StreamEnded
+2025-05-17 17:48:37,867 [INFO] Stream 11 ended
+2025-05-17 17:48:37,867 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:48:37,867 [DEBUG] Event type: DataReceived
+2025-05-17 17:48:37,867 [DEBUG] Received data on stream 13: 16 bytes
+2025-05-17 17:48:37,867 [DEBUG] Event type: StreamEnded
+2025-05-17 17:48:37,867 [INFO] Stream 13 ended
+2025-05-17 17:48:37,867 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:48:37,867 [DEBUG] Event type: DataReceived
+2025-05-17 17:48:37,867 [DEBUG] Received data on stream 15: 16 bytes
+2025-05-17 17:48:37,867 [DEBUG] Event type: StreamEnded
+2025-05-17 17:48:37,867 [INFO] Stream 15 ended
+2025-05-17 17:48:37,868 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:48:37,868 [DEBUG] Event type: DataReceived
+2025-05-17 17:48:37,868 [DEBUG] Received data on stream 17: 16 bytes
+2025-05-17 17:48:37,868 [DEBUG] Event type: StreamEnded
+2025-05-17 17:48:37,868 [INFO] Stream 17 ended
+2025-05-17 17:50:15,522 [ERROR] Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<HTTP2Client._receive_loop() done, defined at /home/sibin/Desktop/projects/quic-stream-router-/client/http2_stream_client.py:120> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "/home/sibin/Desktop/projects/quic-stream-router-/client/http2_stream_client.py", line 276, in <module>
+    asyncio.run(main())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/sibin/Desktop/projects/quic-stream-router-/client/http2_stream_client.py", line 125, in _receive_loop
+    data = self.sock.recv(65535)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 157, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+2025-05-17 17:50:17,635 [DEBUG] Using selector: EpollSelector
+2025-05-17 17:50:17,636 [INFO] === Testing HTTP/2 without TLS ===
+2025-05-17 17:50:17,636 [INFO] Connecting to localhost:8080 without TLS
+2025-05-17 17:50:17,636 [DEBUG] TCP connection established
+2025-05-17 17:50:17,637 [DEBUG] Sending connection preface: 75 bytes
+2025-05-17 17:50:17,637 [DEBUG] Connection preface sent successfully
+2025-05-17 17:50:17,637 [DEBUG] Waiting for server data...
+2025-05-17 17:50:17,638 [DEBUG] Received 51 bytes during setup
+2025-05-17 17:50:17,638 [DEBUG] Raw data: 00002a04000000000000010000100000020000000000040000ffff000500004000000800000000000300000064000600010000
+2025-05-17 17:50:17,638 [DEBUG] Resizing header table to 4096 from 4096
+2025-05-17 17:50:17,639 [DEBUG] Processing 1 events during setup
+2025-05-17 17:50:17,639 [DEBUG] Setup event type: RemoteSettingsChanged
+2025-05-17 17:50:17,639 [INFO] Received settings: {<SettingCodes.HEADER_TABLE_SIZE: 1>: ChangedSetting(setting=1, original_value=4096, new_value=4096), <SettingCodes.ENABLE_PUSH: 2>: ChangedSetting(setting=2, original_value=0, new_value=0), <SettingCodes.INITIAL_WINDOW_SIZE: 4>: ChangedSetting(setting=4, original_value=65535, new_value=65535), <SettingCodes.MAX_FRAME_SIZE: 5>: ChangedSetting(setting=5, original_value=16384, new_value=16384), <SettingCodes.ENABLE_CONNECT_PROTOCOL: 8>: ChangedSetting(setting=8, original_value=0, new_value=0), <SettingCodes.MAX_CONCURRENT_STREAMS: 3>: ChangedSetting(setting=3, original_value=None, new_value=100), <SettingCodes.MAX_HEADER_LIST_SIZE: 6>: ChangedSetting(setting=6, original_value=None, new_value=65536)}
+2025-05-17 17:50:17,639 [INFO] HTTP/2 connection established
+2025-05-17 17:50:17,639 [INFO] Sending request on stream 1 to /video
+2025-05-17 17:50:17,639 [DEBUG] Headers for stream 1: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '28')]
+2025-05-17 17:50:17,640 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,640 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:50:17,640 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,640 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:50:17,640 [DEBUG] Encoding 5 with 7 bits
+2025-05-17 17:50:17,640 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,640 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:50:17,640 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,640 [DEBUG] Encoding 1 with 6 bits
+2025-05-17 17:50:17,641 [DEBUG] Encoding 10 with 7 bits
+2025-05-17 17:50:17,641 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,641 [DEBUG] Encoding 31 with 6 bits
+2025-05-17 17:50:17,641 [DEBUG] Encoding 16 with 7 bits
+2025-05-17 17:50:17,641 [DEBUG] Adding (b'content-length', b'28') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,641 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:50:17,641 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:50:17,641 [DEBUG] Encoded header block to b'\x83D\x85c\xb9\xa4)\xff\x86A\x8a\xa0\xe4\x1d\x13\x9d\t\xb8\xf0\x1e\x07_\x90\x1du\xd0b\r&=L\x1c\x89*VBl(\xe9\\\x82\x13\xdf'
+2025-05-17 17:50:17,641 [DEBUG] Sending 8 bytes on stream 1
+2025-05-17 17:50:17,642 [DEBUG] Sending 6 bytes on stream 1
+2025-05-17 17:50:17,642 [DEBUG] Sending 7 bytes on stream 1
+2025-05-17 17:50:17,642 [DEBUG] Sending 7 bytes on stream 1
+2025-05-17 17:50:17,642 [INFO] Request sent on stream 1 to /video
+2025-05-17 17:50:17,642 [INFO] Request sent on stream 1 to /video
+2025-05-17 17:50:17,642 [INFO] Sending request on stream 3 to /video
+2025-05-17 17:50:17,642 [DEBUG] Headers for stream 3: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '28')]
+2025-05-17 17:50:17,642 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,642 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:50:17,643 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,643 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:50:17,643 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,643 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:50:17,643 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,643 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:50:17,643 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,643 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:50:17,643 [DEBUG] Adding (b'content-length', b'28') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,643 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:50:17,644 [DEBUG] Encoded header block to b'\x83\xc1\x86\xc0\xbf\xbe'
+2025-05-17 17:50:17,644 [DEBUG] Sending 8 bytes on stream 3
+2025-05-17 17:50:17,644 [DEBUG] Sending 6 bytes on stream 3
+2025-05-17 17:50:17,644 [DEBUG] Sending 7 bytes on stream 3
+2025-05-17 17:50:17,644 [DEBUG] Sending 7 bytes on stream 3
+2025-05-17 17:50:17,644 [INFO] Request sent on stream 3 to /video
+2025-05-17 17:50:17,644 [INFO] Request sent on stream 3 to /video
+2025-05-17 17:50:17,644 [INFO] Sending request on stream 5 to /video
+2025-05-17 17:50:17,644 [DEBUG] Headers for stream 5: [(':method', 'POST'), (':path', '/video'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '28')]
+2025-05-17 17:50:17,645 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,645 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:50:17,645 [DEBUG] Adding (b':path', b'/video') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,645 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:50:17,645 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,645 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:50:17,645 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,645 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:50:17,645 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,646 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:50:17,646 [DEBUG] Adding (b'content-length', b'28') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,646 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:50:17,646 [DEBUG] Encoded header block to b'\x83\xc1\x86\xc0\xbf\xbe'
+2025-05-17 17:50:17,646 [DEBUG] Sending 8 bytes on stream 5
+2025-05-17 17:50:17,646 [DEBUG] Sending 6 bytes on stream 5
+2025-05-17 17:50:17,646 [DEBUG] Sending 7 bytes on stream 5
+2025-05-17 17:50:17,646 [DEBUG] Sending 7 bytes on stream 5
+2025-05-17 17:50:17,646 [INFO] Request sent on stream 5 to /video
+2025-05-17 17:50:17,646 [INFO] Request sent on stream 5 to /video
+2025-05-17 17:50:17,646 [INFO] Sending request on stream 7 to /text
+2025-05-17 17:50:17,647 [DEBUG] Headers for stream 7: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '27')]
+2025-05-17 17:50:17,647 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,647 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:50:17,647 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,647 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:50:17,647 [DEBUG] Encoding 4 with 7 bits
+2025-05-17 17:50:17,647 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,647 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:50:17,647 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,647 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:50:17,647 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,647 [DEBUG] Encoding 64 with 7 bits
+2025-05-17 17:50:17,647 [DEBUG] Adding (b'content-length', b'27') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,648 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:50:17,648 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:50:17,648 [DEBUG] Encoded header block to b'\x83D\x84a%\xf2\x9f\x86\xc1\xc0\\\x82\x13\xbf'
+2025-05-17 17:50:17,648 [DEBUG] Sending 8 bytes on stream 7
+2025-05-17 17:50:17,648 [DEBUG] Sending 5 bytes on stream 7
+2025-05-17 17:50:17,648 [DEBUG] Sending 7 bytes on stream 7
+2025-05-17 17:50:17,648 [DEBUG] Sending 7 bytes on stream 7
+2025-05-17 17:50:17,648 [INFO] Request sent on stream 7 to /text
+2025-05-17 17:50:17,648 [INFO] Request sent on stream 7 to /text
+2025-05-17 17:50:17,648 [INFO] Sending request on stream 9 to /text
+2025-05-17 17:50:17,648 [DEBUG] Headers for stream 9: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '27')]
+2025-05-17 17:50:17,649 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,649 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:50:17,649 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,649 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:50:17,649 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,649 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:50:17,649 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,649 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:50:17,649 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,649 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:50:17,649 [DEBUG] Adding (b'content-length', b'27') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,649 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:50:17,649 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc2\xc1\xbe'
+2025-05-17 17:50:17,649 [DEBUG] Sending 8 bytes on stream 9
+2025-05-17 17:50:17,650 [DEBUG] Sending 5 bytes on stream 9
+2025-05-17 17:50:17,650 [DEBUG] Sending 7 bytes on stream 9
+2025-05-17 17:50:17,650 [DEBUG] Sending 7 bytes on stream 9
+2025-05-17 17:50:17,650 [INFO] Request sent on stream 9 to /text
+2025-05-17 17:50:17,650 [INFO] Request sent on stream 9 to /text
+2025-05-17 17:50:17,650 [INFO] Sending request on stream 11 to /text
+2025-05-17 17:50:17,650 [DEBUG] Headers for stream 11: [(':method', 'POST'), (':path', '/text'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '27')]
+2025-05-17 17:50:17,650 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,650 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:50:17,650 [DEBUG] Adding (b':path', b'/text') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,650 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:50:17,650 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,651 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:50:17,651 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,651 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:50:17,651 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,651 [DEBUG] Encoding 65 with 7 bits
+2025-05-17 17:50:17,651 [DEBUG] Adding (b'content-length', b'27') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,651 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:50:17,651 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc2\xc1\xbe'
+2025-05-17 17:50:17,651 [DEBUG] Sending 8 bytes on stream 11
+2025-05-17 17:50:17,651 [DEBUG] Sending 5 bytes on stream 11
+2025-05-17 17:50:17,651 [DEBUG] Sending 7 bytes on stream 11
+2025-05-17 17:50:17,651 [DEBUG] Sending 7 bytes on stream 11
+2025-05-17 17:50:17,651 [INFO] Request sent on stream 11 to /text
+2025-05-17 17:50:17,652 [INFO] Request sent on stream 11 to /text
+2025-05-17 17:50:17,652 [INFO] Sending request on stream 13 to /control
+2025-05-17 17:50:17,652 [DEBUG] Headers for stream 13: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:50:17,652 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,652 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:50:17,652 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,652 [DEBUG] Encoding 4 with 6 bits
+2025-05-17 17:50:17,652 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:50:17,652 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,652 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:50:17,652 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,652 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:50:17,652 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,653 [DEBUG] Encoding 66 with 7 bits
+2025-05-17 17:50:17,653 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,653 [DEBUG] Encoding 28 with 6 bits
+2025-05-17 17:50:17,653 [DEBUG] Encoding 2 with 7 bits
+2025-05-17 17:50:17,653 [DEBUG] Encoded header block to b'\x83D\x86`\x87\xa96\x1e\x8f\x86\xc3\xc2\\\x82\x13_'
+2025-05-17 17:50:17,653 [DEBUG] Sending 8 bytes on stream 13
+2025-05-17 17:50:17,653 [DEBUG] Sending 8 bytes on stream 13
+2025-05-17 17:50:17,653 [DEBUG] Sending 8 bytes on stream 13
+2025-05-17 17:50:17,653 [INFO] Request sent on stream 13 to /control
+2025-05-17 17:50:17,653 [INFO] Request sent on stream 13 to /control
+2025-05-17 17:50:17,653 [INFO] Sending request on stream 15 to /control
+2025-05-17 17:50:17,653 [DEBUG] Headers for stream 15: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:50:17,654 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,654 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:50:17,654 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,654 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:50:17,654 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,654 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:50:17,654 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,654 [DEBUG] Encoding 68 with 7 bits
+2025-05-17 17:50:17,654 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,654 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:50:17,654 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,654 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:50:17,654 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc4\xc3\xbe'
+2025-05-17 17:50:17,655 [DEBUG] Sending 8 bytes on stream 15
+2025-05-17 17:50:17,655 [DEBUG] Sending 8 bytes on stream 15
+2025-05-17 17:50:17,655 [DEBUG] Sending 8 bytes on stream 15
+2025-05-17 17:50:17,655 [INFO] Request sent on stream 15 to /control
+2025-05-17 17:50:17,655 [INFO] Request sent on stream 15 to /control
+2025-05-17 17:50:17,655 [INFO] Sending request on stream 17 to /control
+2025-05-17 17:50:17,655 [DEBUG] Headers for stream 17: [(':method', 'POST'), (':path', '/control'), (':scheme', 'http'), (':authority', 'localhost:8080'), ('content-type', 'application/octet-stream'), ('content-length', '24')]
+2025-05-17 17:50:17,655 [DEBUG] Adding (b':method', b'POST') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,655 [DEBUG] Encoding 3 with 7 bits
+2025-05-17 17:50:17,655 [DEBUG] Adding (b':path', b'/control') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,655 [DEBUG] Encoding 63 with 7 bits
+2025-05-17 17:50:17,656 [DEBUG] Adding (b':scheme', b'http') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,656 [DEBUG] Encoding 6 with 7 bits
+2025-05-17 17:50:17,656 [DEBUG] Adding (b':authority', b'localhost:8080') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,656 [DEBUG] Encoding 68 with 7 bits
+2025-05-17 17:50:17,656 [DEBUG] Adding (b'content-type', b'application/octet-stream') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,656 [DEBUG] Encoding 67 with 7 bits
+2025-05-17 17:50:17,656 [DEBUG] Adding (b'content-length', b'24') to the header table, sensitive:False, huffman:True
+2025-05-17 17:50:17,656 [DEBUG] Encoding 62 with 7 bits
+2025-05-17 17:50:17,656 [DEBUG] Encoded header block to b'\x83\xbf\x86\xc4\xc3\xbe'
+2025-05-17 17:50:17,656 [DEBUG] Sending 8 bytes on stream 17
+2025-05-17 17:50:17,656 [DEBUG] Sending 8 bytes on stream 17
+2025-05-17 17:50:17,656 [DEBUG] Sending 8 bytes on stream 17
+2025-05-17 17:50:17,656 [INFO] Request sent on stream 17 to /control
+2025-05-17 17:50:17,657 [INFO] Request sent on stream 17 to /control
+2025-05-17 17:50:17,657 [INFO] Starting receive loop
+2025-05-17 17:50:17,657 [DEBUG] Received 9 bytes
+2025-05-17 17:50:17,657 [DEBUG] Processing 1 events
+2025-05-17 17:50:17,657 [DEBUG] Event type: SettingsAcknowledged
+2025-05-17 17:50:17,657 [DEBUG] Sending 814 bytes
+2025-05-17 17:50:17,723 [DEBUG] Received 346 bytes
+2025-05-17 17:50:17,724 [DEBUG] Decoding b'\x88_\x92I|\xa5\x89\xd3M\x1fj\x12q\xd8\x82\xa6\x0bS*\xcf\x7f\\\x82\x0b_'
+2025-05-17 17:50:17,724 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:50:17,724 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:50:17,724 [DEBUG] Decoded 31, consumed 1 bytes
+2025-05-17 17:50:17,724 [DEBUG] Decoded 18, consumed 1 bytes
+2025-05-17 17:50:17,724 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), total consumed 20 bytes, indexed True
+2025-05-17 17:50:17,724 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:50:17,724 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:50:17,724 [DEBUG] Decoded (b'content-length', b'14'), total consumed 4 bytes, indexed True
+2025-05-17 17:50:17,724 [DEBUG] Decoding b'\x88\xbf\xbe'
+2025-05-17 17:50:17,725 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:50:17,725 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:50:17,725 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:50:17,725 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:50:17,725 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:50:17,725 [DEBUG] Decoded (b'content-length', b'14'), consumed 1
+2025-05-17 17:50:17,725 [DEBUG] Decoding b'\x88\xbf\xbe'
+2025-05-17 17:50:17,725 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:50:17,725 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:50:17,725 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:50:17,725 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:50:17,726 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:50:17,726 [DEBUG] Decoded (b'content-length', b'14'), consumed 1
+2025-05-17 17:50:17,726 [DEBUG] Decoding b'\x88\xbf\\\x82\x0b?'
+2025-05-17 17:50:17,726 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:50:17,726 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:50:17,726 [DEBUG] Decoded 63, consumed 1 bytes
+2025-05-17 17:50:17,726 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:50:17,726 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:50:17,726 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:50:17,726 [DEBUG] Decoded (b'content-length', b'13'), total consumed 4 bytes, indexed True
+2025-05-17 17:50:17,727 [DEBUG] Decoding b'\x88\xc0\xbe'
+2025-05-17 17:50:17,727 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:50:17,727 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:50:17,727 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:50:17,727 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:50:17,727 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:50:17,727 [DEBUG] Decoded (b'content-length', b'13'), consumed 1
+2025-05-17 17:50:17,727 [DEBUG] Decoding b'\x88\xc0\xbe'
+2025-05-17 17:50:17,727 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:50:17,727 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:50:17,728 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:50:17,728 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:50:17,728 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:50:17,728 [DEBUG] Decoded (b'content-length', b'13'), consumed 1
+2025-05-17 17:50:17,728 [DEBUG] Decoding b'\x88\xc0\\\x82\x0b\x9f'
+2025-05-17 17:50:17,728 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:50:17,728 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:50:17,728 [DEBUG] Decoded 64, consumed 1 bytes
+2025-05-17 17:50:17,728 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:50:17,728 [DEBUG] Decoded 28, consumed 1 bytes
+2025-05-17 17:50:17,728 [DEBUG] Decoded 2, consumed 1 bytes
+2025-05-17 17:50:17,728 [DEBUG] Decoded (b'content-length', b'16'), total consumed 4 bytes, indexed True
+2025-05-17 17:50:17,728 [DEBUG] Decoding b'\x88\xc1\xbe'
+2025-05-17 17:50:17,729 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:50:17,729 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:50:17,729 [DEBUG] Decoded 65, consumed 1 bytes
+2025-05-17 17:50:17,729 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:50:17,729 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:50:17,729 [DEBUG] Decoded (b'content-length', b'16'), consumed 1
+2025-05-17 17:50:17,729 [DEBUG] Decoding b'\x88\xc1\xbe'
+2025-05-17 17:50:17,729 [DEBUG] Decoded 8, consumed 1 bytes
+2025-05-17 17:50:17,729 [DEBUG] Decoded (b':status', b'200'), consumed 1
+2025-05-17 17:50:17,729 [DEBUG] Decoded 65, consumed 1 bytes
+2025-05-17 17:50:17,730 [DEBUG] Decoded (b'content-type', b'text/html; charset=utf-8'), consumed 1
+2025-05-17 17:50:17,730 [DEBUG] Decoded 62, consumed 1 bytes
+2025-05-17 17:50:17,730 [DEBUG] Decoded (b'content-length', b'16'), consumed 1
+2025-05-17 17:50:17,730 [DEBUG] Processing 27 events
+2025-05-17 17:50:17,730 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:50:17,730 [DEBUG] Event type: DataReceived
+2025-05-17 17:50:17,730 [DEBUG] Received data on stream 1: 14 bytes
+2025-05-17 17:50:17,730 [DEBUG] Event type: StreamEnded
+2025-05-17 17:50:17,730 [INFO] Stream 1 ended
+2025-05-17 17:50:17,730 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:50:17,730 [DEBUG] Event type: DataReceived
+2025-05-17 17:50:17,730 [DEBUG] Received data on stream 3: 14 bytes
+2025-05-17 17:50:17,730 [DEBUG] Event type: StreamEnded
+2025-05-17 17:50:17,730 [INFO] Stream 3 ended
+2025-05-17 17:50:17,730 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:50:17,730 [DEBUG] Event type: DataReceived
+2025-05-17 17:50:17,730 [DEBUG] Received data on stream 5: 14 bytes
+2025-05-17 17:50:17,730 [DEBUG] Event type: StreamEnded
+2025-05-17 17:50:17,730 [INFO] Stream 5 ended
+2025-05-17 17:50:17,731 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:50:17,731 [DEBUG] Event type: DataReceived
+2025-05-17 17:50:17,731 [DEBUG] Received data on stream 7: 13 bytes
+2025-05-17 17:50:17,731 [DEBUG] Event type: StreamEnded
+2025-05-17 17:50:17,731 [INFO] Stream 7 ended
+2025-05-17 17:50:17,731 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:50:17,731 [DEBUG] Event type: DataReceived
+2025-05-17 17:50:17,731 [DEBUG] Received data on stream 9: 13 bytes
+2025-05-17 17:50:17,731 [DEBUG] Event type: StreamEnded
+2025-05-17 17:50:17,731 [INFO] Stream 9 ended
+2025-05-17 17:50:17,731 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:50:17,731 [DEBUG] Event type: DataReceived
+2025-05-17 17:50:17,731 [DEBUG] Received data on stream 11: 13 bytes
+2025-05-17 17:50:17,731 [DEBUG] Event type: StreamEnded
+2025-05-17 17:50:17,731 [INFO] Stream 11 ended
+2025-05-17 17:50:17,731 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:50:17,731 [DEBUG] Event type: DataReceived
+2025-05-17 17:50:17,731 [DEBUG] Received data on stream 13: 16 bytes
+2025-05-17 17:50:17,731 [DEBUG] Event type: StreamEnded
+2025-05-17 17:50:17,731 [INFO] Stream 13 ended
+2025-05-17 17:50:17,731 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:50:17,731 [DEBUG] Event type: DataReceived
+2025-05-17 17:50:17,731 [DEBUG] Received data on stream 15: 16 bytes
+2025-05-17 17:50:17,731 [DEBUG] Event type: StreamEnded
+2025-05-17 17:50:17,732 [INFO] Stream 15 ended
+2025-05-17 17:50:17,732 [DEBUG] Event type: ResponseReceived
+2025-05-17 17:50:17,732 [DEBUG] Event type: DataReceived
+2025-05-17 17:50:17,732 [DEBUG] Received data on stream 17: 16 bytes
+2025-05-17 17:50:17,732 [DEBUG] Event type: StreamEnded
+2025-05-17 17:50:17,732 [INFO] Stream 17 ended

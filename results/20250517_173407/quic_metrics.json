@@ -1,0 +1,16 @@
+{
+  "stream_metrics": {},
+  "connection_metrics": {
+    "start_time": 1747499641.9507449,
+    "connection_establishment_time": 0,
+    "streams": [],
+    "total_bytes_sent": 0,
+    "total_bytes_received": 0,
+    "total_packets_sent": 0,
+    "total_packets_received": 0,
+    "stream_establishment_times": [],
+    "errors": []
+  },
+  "uptime": 5.216963052749634,
+  "timestamp": "20250517_173407"
+}

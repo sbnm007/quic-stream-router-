@@ -1,0 +1,17 @@
+QUIC Performance Report
+======================
+
+Generated at: 2025-05-17 17:34:07
+
+Connection Establishment
+----------------------
+Connection Setup Time: 0.00ms
+
+Overall Statistics
+-----------------
+Total Streams: 0
+Total Bytes Transferred: 0
+Uptime: 5.22 seconds
+
+Detailed Stream Analysis
+----------------------

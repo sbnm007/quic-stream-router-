@@ -1,0 +1,82 @@
+QUIC Performance Report
+======================
+
+Generated at: 2025-05-17 17:36:09
+
+Connection Establishment
+----------------------
+Connection Setup Time: 13.66ms
+Average Stream Setup Time: 22.22ms
+Total Streams Established: 8
+
+Overall Statistics
+-----------------
+Total Streams: 3
+Total Bytes Transferred: 161
+Uptime: 121.57 seconds
+
+Detailed Stream Analysis
+----------------------
+
+Stream 0 (/video):
+  Duration: 0.00s
+  Total Bytes: 56
+  Average Throughput: 807151.29 bytes/s
+  QUIC Latency (ms):
+    Average: 25.28
+    Min: 14.38
+    Max: 35.79
+    Samples: 3
+  HTTP Latency (ms):
+    Average: 3.51
+    Min: 2.69
+    Max: 5.15
+    Samples: 4
+  Packet Statistics:
+    Sent: 1
+    Received: 3
+    Retransmissions: 0
+    Packet Loss Rate: -200.00%
+    Average Packet Size: 14.00 bytes
+
+Stream 4 (/text):
+  Duration: 0.00s
+  Total Bytes: 55
+  Average Throughput: 684530.33 bytes/s
+  QUIC Latency (ms):
+    Average: 22.83
+    Min: 12.07
+    Max: 33.56
+    Samples: 3
+  HTTP Latency (ms):
+    Average: 3.59
+    Min: 2.94
+    Max: 4.18
+    Samples: 4
+  Packet Statistics:
+    Sent: 1
+    Received: 3
+    Retransmissions: 0
+    Packet Loss Rate: -200.00%
+    Average Packet Size: 13.75 bytes
+
+Stream 8 (/control):
+  Duration: 0.00s
+  Total Bytes: 50
+  Average Throughput: 576140.66 bytes/s
+  QUIC Latency (ms):
+    Average: 16.81
+    Min: 11.98
+    Max: 21.64
+    Samples: 2
+  HTTP Latency (ms):
+    Average: 3.02
+    Min: 2.76
+    Max: 3.24
+    Samples: 3
+  Packet Statistics:
+    Sent: 1
+    Received: 2
+    Retransmissions: 0
+    Packet Loss Rate: -100.00%
+    Average Packet Size: 16.67 bytes

@@ -1,0 +1,160 @@
+HTTP/2 Performance Report
+=======================
+
+Generated at: 2025-05-23 22:35:18
+
+Connection Establishment
+----------------------
+Connection Setup Time: 4.07ms
+Average Stream Setup Time: 223.44ms
+Total Streams Established: 9
+
+Overall Statistics
+-----------------
+Total Streams: 9
+Total Bytes Transferred: 237
+Uptime: 80.34 seconds
+
+Multiplexing Analysis
+--------------------
+Maximum Concurrent Streams: 9
+Average Time Between Streams: 47.90ms
+Stream Establishment Rate: 0.11 streams/second
+
+Detailed Stream Analysis
+----------------------
+
+Stream 1 (/video):
+  Duration: 0.04s
+  Total Bytes: 28
+  Average Throughput: 706.36 bytes/s
+  HTTP Latency (ms):
+    Average: 6.88
+    Min: 5.73
+    Max: 8.67
+    Samples: 5
+  Throughput Analysis:
+    Average: -322.70 bytes/s
+    Min: -1146.25 bytes/s
+    Max: 132.34 bytes/s
+    Samples: 4
+
+Stream 3 (/video):
+  Duration: 0.04s
+  Total Bytes: 28
+  Average Throughput: 784.17 bytes/s
+  HTTP Latency (ms):
+    Average: 6.03
+    Min: 5.45
+    Max: 7.09
+    Samples: 5
+  Throughput Analysis:
+    Average: -347.66 bytes/s
+    Min: -1214.43 bytes/s
+    Max: 144.77 bytes/s
+    Samples: 4
+
+Stream 5 (/video):
+  Duration: 0.04s
+  Total Bytes: 28
+  Average Throughput: 773.83 bytes/s
+  HTTP Latency (ms):
+    Average: 6.19
+    Min: 5.01
+    Max: 7.87
+    Samples: 5
+  Throughput Analysis:
+    Average: -316.35 bytes/s
+    Min: -1124.61 bytes/s
+    Max: 149.60 bytes/s
+    Samples: 4
+
+Stream 7 (/text):
+  Duration: 0.04s
+  Total Bytes: 27
+  Average Throughput: 628.64 bytes/s
+  HTTP Latency (ms):
+    Average: 7.50
+    Min: 6.02
+    Max: 9.08
+    Samples: 5
+  Throughput Analysis:
+    Average: -278.15 bytes/s
+    Min: -873.42 bytes/s
+    Max: 198.69 bytes/s
+    Samples: 4
+
+Stream 9 (/text):
+  Duration: 0.04s
+  Total Bytes: 27
+  Average Throughput: 675.33 bytes/s
+  HTTP Latency (ms):
+    Average: 6.26
+    Min: 5.14
+    Max: 7.42
+    Samples: 5
+  Throughput Analysis:
+    Average: -308.39 bytes/s
+    Min: -1082.12 bytes/s
+    Max: 349.57 bytes/s
+    Samples: 4
+
+Stream 11 (/text):
+  Duration: 0.06s
+  Total Bytes: 27
+  Average Throughput: 474.47 bytes/s
+  HTTP Latency (ms):
+    Average: 9.94
+    Min: 8.20
+    Max: 12.30
+    Samples: 5
+  Throughput Analysis:
+    Average: -187.40 bytes/s
+    Min: -740.74 bytes/s
+    Max: 220.76 bytes/s
+    Samples: 4
+
+Stream 13 (/control):
+  Duration: 0.05s
+  Total Bytes: 24
+  Average Throughput: 447.20 bytes/s
+  HTTP Latency (ms):
+    Average: 10.12
+    Min: 7.83
+    Max: 12.63
+    Samples: 4
+  Throughput Analysis:
+    Average: -196.23 bytes/s
+    Min: -588.69 bytes/s
+    Max: 0.00 bytes/s
+    Samples: 3
+
+Stream 15 (/control):
+  Duration: 0.07s
+  Total Bytes: 24
+  Average Throughput: 324.71 bytes/s
+  HTTP Latency (ms):
+    Average: 14.91
+    Min: 12.86
+    Max: 16.65
+    Samples: 4
+  Throughput Analysis:
+    Average: -152.93 bytes/s
+    Min: -458.78 bytes/s
+    Max: 0.00 bytes/s
+    Samples: 3
+
+Stream 17 (/control):
+  Duration: 0.07s
+  Total Bytes: 24
+  Average Throughput: 335.69 bytes/s
+  HTTP Latency (ms):
+    Average: 15.44
+    Min: 12.76
+    Max: 19.26
+    Samples: 4
+  Throughput Analysis:
+    Average: -107.87 bytes/s
+    Min: -323.61 bytes/s
+    Max: 0.00 bytes/s
+    Samples: 3

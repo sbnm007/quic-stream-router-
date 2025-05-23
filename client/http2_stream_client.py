@@ -28,6 +28,7 @@ class HTTP2Client:
         self.conn = None
         self.sock = None
         self.response_futures = {}
+        self.response_data = {}  # Store accumulated data for each stream
         
     async def connect(self):
         """Establish connection with the server"""
@@ -136,9 +137,10 @@ class HTTP2Client:
                     if isinstance(event, h2.events.DataReceived):
                         logger.debug(f"Received data on stream {event.stream_id}: {len(event.data)} bytes")
                         if event.stream_id in self.response_futures:
-                            future = self.response_futures[event.stream_id]
-                            if not future.done():
-                                future.set_result(event.data)
+                            # Accumulate data for the stream
+                            if event.stream_id not in self.response_data:
+                                self.response_data[event.stream_id] = b''
+                            self.response_data[event.stream_id] += event.data
                         self.conn.acknowledge_received_data(
                             event.flow_controlled_length,
                             event.stream_id
@@ -149,7 +151,10 @@ class HTTP2Client:
                         if event.stream_id in self.response_futures:
                             future = self.response_futures[event.stream_id]
                             if not future.done():
-                                future.set_result(b'')
+                                # Set the complete accumulated data
+                                future.set_result(self.response_data.get(event.stream_id, b''))
+                                # Clean up
+                                del self.response_data[event.stream_id]
                     
                     elif isinstance(event, h2.events.StreamReset):
                         logger.error(f"Stream {event.stream_id} was reset")
@@ -170,9 +175,13 @@ class HTTP2Client:
         
         logger.info("Receive loop ended")
 
-    def send_request(self, path: str, stream_id: int) -> None:
-        """Send a request on the specified stream."""
+    def send_request(self, path: str, stream_id: int) -> asyncio.Future:
+        """Send a request on the specified stream and return a future for the response."""
         logger.info(f"Sending request on stream {stream_id} to {path}")
+        
+        # Create a future for this stream's response
+        future = asyncio.Future()
+        self.response_futures[stream_id] = future
         
         # Define stream data based on path
         if path == "/video":
@@ -207,6 +216,8 @@ class HTTP2Client:
         # End the stream
         self.conn.end_stream(stream_id=stream_id)
         logger.info(f"Request sent on stream {stream_id} to {path}")
+        
+        return future
 
 async def main():
     # Test without TLS
@@ -219,58 +230,35 @@ async def main():
     
     # Send concurrent requests to different services
     paths = ['/video', '/text', '/control']
-    tasks = []
+    futures = []
     
     # Create multiple streams for each path
     for path in paths:
         for i in range(3):  # Send 3 concurrent requests per path
             stream_id = client.conn.get_next_available_stream_id()
-            client.send_request(path, stream_id)
-            tasks.append(stream_id)
+            future = client.send_request(path, stream_id)
+            futures.append(future)
             logger.info(f"Request sent on stream {stream_id} to {path}")
     
-    # Wait for all responses
-    responses = await asyncio.gather(*tasks, return_exceptions=True)
-    for i, response in enumerate(responses):
-        path = paths[i // 3]  # Calculate path based on task index
-        if isinstance(response, Exception):
-            logger.error(f"Error for {path}: {str(response)}")
-        else:
-            logger.info(f"Received response for {path}: {response.decode() if response else 'None'}")
-    
-    client.sock.close()
-    receive_task.cancel()
-    
-    # Test with TLS
-    logger.info("=== Testing HTTP/2 with TLS ===")
-    client_tls = HTTP2Client(port=8443, use_tls=True)
-    await client_tls.connect()
-    
-    # Start receive loop
-    receive_task_tls = asyncio.create_task(client_tls._receive_loop())
-    
-    # Send concurrent requests to different services
-    tasks_tls = []
-    
-    # Create multiple streams for each path
-    for path in paths:
-        for i in range(3):  # Send 3 concurrent requests per path
-            stream_id = client_tls.conn.get_next_available_stream_id()
-            client_tls.send_request(path, stream_id)
-            tasks_tls.append(stream_id)
-            logger.info(f"Request sent on stream {stream_id} to {path} (TLS)")
-    
-    # Wait for all responses
-    responses_tls = await asyncio.gather(*tasks_tls, return_exceptions=True)
-    for i, response in enumerate(responses_tls):
-        path = paths[i // 3]  # Calculate path based on task index
-        if isinstance(response, Exception):
-            logger.error(f"Error for {path} (TLS): {str(response)}")
-        else:
-            logger.info(f"Received response for {path} (TLS): {response.decode() if response else 'None'}")
-    
-    client_tls.sock.close()
-    receive_task_tls.cancel()
+    try:
+        # Wait for all responses
+        responses = await asyncio.gather(*futures, return_exceptions=True)
+        for i, response in enumerate(responses):
+            path = paths[i // 3]  # Calculate path based on task index
+            if isinstance(response, Exception):
+                logger.error(f"Error for {path}: {str(response)}")
+            else:
+                logger.info(f"Received response for {path}: {response.decode() if response else 'None'}")
+    finally:
+        # Cancel receive task and close connection
+        receive_task.cancel()
+        try:
+            await receive_task
+        except asyncio.CancelledError:
+            pass
+        if client.sock:
+            client.sock.close()
+        logger.info("Client connection closed")
 
 if __name__ == "__main__":
     asyncio.run(main()) 

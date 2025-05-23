@@ -40,6 +40,9 @@ class StreamMetrics:
         self.bytes_sent = 0
         self.bytes_received = 0
         self.http_latency = []
+        self.throughput_samples = []
+        self.last_byte_time = time.time()
+        self.last_byte_count = 0
         self.errors = []
 
     @property
@@ -60,6 +63,7 @@ class StreamMetrics:
             'bytes_sent': self.bytes_sent,
             'bytes_received': self.bytes_received,
             'http_latency': self.http_latency,
+            'throughput_samples': self.throughput_samples,
             'errors': self.errors,
             'average_throughput': self.average_throughput
         }
@@ -100,12 +104,26 @@ class PerformanceMonitor:
 
     def record_bytes(self, stream_id: int, sent: int = 0, received: int = 0):
         if stream_id in self.stream_metrics:
+            metrics = self.stream_metrics[stream_id]
             if sent > 0:
                 logger.debug(f"Recording {sent} bytes sent for stream {stream_id}")
             if received > 0:
                 logger.debug(f"Recording {received} bytes received for stream {stream_id}")
-            self.stream_metrics[stream_id].bytes_sent += sent
-            self.stream_metrics[stream_id].bytes_received += received
+            
+            metrics.bytes_sent += sent
+            metrics.bytes_received += received
+            
+            # Calculate instantaneous throughput
+            current_time = time.time()
+            if metrics.last_byte_count > 0:
+                time_diff = current_time - metrics.last_byte_time
+                if time_diff > 0:
+                    bytes_diff = (sent + received) - metrics.last_byte_count
+                    throughput = bytes_diff / time_diff
+                    metrics.throughput_samples.append(throughput)
+            
+            metrics.last_byte_time = current_time
+            metrics.last_byte_count = sent + received
 
     def record_error(self, stream_id: Optional[int], error: str):
         logger.error(f"Error on stream {stream_id if stream_id is not None else 'connection'}: {error}")
@@ -116,7 +134,7 @@ class PerformanceMonitor:
     def save_metrics(self):
         """Save performance metrics to file"""
         timestamp = time.strftime("%Y%m%d_%H%M%S")
-        results_dir = os.path.join("results", "http2", timestamp)
+        results_dir = os.path.join("results", timestamp)
         os.makedirs(results_dir, exist_ok=True)
         
         # Convert metrics to dictionary format
@@ -222,6 +240,13 @@ class PerformanceMonitor:
                     f.write(f"    Max: {max(http_latencies_ms):.2f}\n")
                     f.write(f"    Samples: {len(http_latencies_ms)}\n")
                 
+                if metrics.throughput_samples:
+                    f.write(f"  Throughput Analysis:\n")
+                    f.write(f"    Average: {sum(metrics.throughput_samples) / len(metrics.throughput_samples):.2f} bytes/s\n")
+                    f.write(f"    Min: {min(metrics.throughput_samples):.2f} bytes/s\n")
+                    f.write(f"    Max: {max(metrics.throughput_samples):.2f} bytes/s\n")
+                    f.write(f"    Samples: {len(metrics.throughput_samples)}\n")
+                
                 if metrics.errors:
                     f.write(f"  Errors:\n")
                     for error in metrics.errors:
@@ -234,6 +259,8 @@ class HTTP2Server:
         self.use_tls = use_tls
         self.performance_monitor = PerformanceMonitor()
         self.running = True
+        self.last_metrics_save = time.time()
+        self.metrics_save_interval = 60  # Save metrics every 60 seconds
         
     def create_ssl_context(self):
         """Create SSL context for TLS connections"""
@@ -337,9 +364,10 @@ class HTTP2Server:
         
         # Dictionary to store active streams
         active_streams = {}
+        request_handled = False
         
         # Main connection handling loop
-        while self.running:
+        while self.running and not request_handled:
             try:
                 logger.debug("Server: Waiting for data...")
                 # Use non-blocking read for the main loop with asyncio
@@ -410,12 +438,15 @@ class HTTP2Server:
                             self.performance_monitor.record_stream_end(event.stream_id)
                             # Remove stream from active streams
                             del active_streams[event.stream_id]
+                            # Mark request as handled
+                            request_handled = True
                     
                     elif isinstance(event, h2.events.StreamReset):
                         logger.error(f"Server: Stream {event.stream_id} was reset with error code {event.error_code}")
                         if event.stream_id in active_streams:
                             del active_streams[event.stream_id]
                         self.performance_monitor.record_error(event.stream_id, f"Stream reset with error code {event.error_code}")
+                        request_handled = True
                     
                     elif isinstance(event, h2.events.ConnectionTerminated):
                         logger.error(f"Server: Connection terminated: {event.error_code}")
@@ -461,6 +492,20 @@ class HTTP2Server:
         
         sock.close()
         logger.info(f"Server: Connection with {client_address} closed")
+        
+        # Save metrics and exit after handling request
+        self.performance_monitor.save_metrics()
+        self.running = False
+
+    async def periodic_metrics_save(self):
+        """Periodically save metrics"""
+        while self.running:
+            current_time = time.time()
+            if current_time - self.last_metrics_save >= self.metrics_save_interval:
+                logger.info("Performing periodic metrics save")
+                self.performance_monitor.save_metrics()
+                self.last_metrics_save = current_time
+            await asyncio.sleep(1)  # Check every second
 
     async def start(self):
         """Start the HTTP/2 server"""
@@ -482,6 +527,9 @@ class HTTP2Server:
         logger.info(f"HTTP/2 Server started on {self.host}:{self.port} {'with TLS' if self.use_tls else 'without TLS'}")
         
         loop = asyncio.get_event_loop()
+        
+        # Start periodic metrics saving
+        metrics_task = asyncio.create_task(self.periodic_metrics_save())
         
         try:
             while self.running:
@@ -512,6 +560,12 @@ class HTTP2Server:
         except KeyboardInterrupt:
             logger.info("Server: Shutting down...")
             self.running = False
+            # Cancel metrics task
+            metrics_task.cancel()
+            try:
+                await metrics_task
+            except asyncio.CancelledError:
+                pass
             # Delay briefly to allow ongoing tasks to finish logging
             await asyncio.sleep(1.0)
             self.performance_monitor.save_metrics()
@@ -523,22 +577,49 @@ class HTTP2Server:
 def cleanup(signum, frame):
     """Cleanup function for graceful shutdown"""
     logger.info("Shutting down...")
+    # Save metrics before exit
+    if hasattr(server, 'performance_monitor'):
+        server.performance_monitor.save_metrics()
+    if hasattr(server_tls, 'performance_monitor'):
+        server_tls.performance_monitor.save_metrics()
     os._exit(0)
 
 async def main():
+    global server, server_tls  # Make servers global so cleanup can access them
+    
     # Set up signal handlers
     signal.signal(signal.SIGINT, cleanup)
     signal.signal(signal.SIGTERM, cleanup)
     
-    # Start non-TLS server
-    logger.info("=== Starting HTTP/2 Server without TLS ===")
-    server = HTTP2Server(port=8080, use_tls=False)
-    await server.start()
-    
-    # Start TLS server
-    logger.info("=== Starting HTTP/2 Server with TLS ===")
-    server_tls = HTTP2Server(port=8443, use_tls=True)
-    await server_tls.start()
+    try:
+        # Start non-TLS server
+        logger.info("=== Starting HTTP/2 Server without TLS ===")
+        server = HTTP2Server(port=8080, use_tls=False)
+        await server.start()
+    except Exception as e:
+        logger.error(f"Error in non-TLS server: {e}")
+        if hasattr(server, 'performance_monitor'):
+            server.performance_monitor.save_metrics()
+        raise e
+    finally:
+        # Save metrics before exit
+        if hasattr(server, 'performance_monitor'):
+            server.performance_monitor.save_metrics()
+        
+    try:
+        # Start TLS server
+        logger.info("=== Starting HTTP/2 Server with TLS ===")
+        server_tls = HTTP2Server(port=8443, use_tls=True)
+        await server_tls.start()
+    except Exception as e:
+        logger.error(f"Error in TLS server: {e}")
+        if hasattr(server_tls, 'performance_monitor'):
+            server_tls.performance_monitor.save_metrics()
+        raise e
+    finally:
+        # Save metrics before exit
+        if hasattr(server_tls, 'performance_monitor'):
+            server_tls.performance_monitor.save_metrics()
 
 if __name__ == "__main__":
     asyncio.run(main()) 

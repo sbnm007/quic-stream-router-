@@ -1,0 +1,23 @@
+HTTP/2 Performance Report
+=======================
+
+Generated at: 2025-05-23 22:34:58
+
+Connection Establishment
+----------------------
+Connection Setup Time: 0.00ms
+
+Overall Statistics
+-----------------
+Total Streams: 0
+Total Bytes Transferred: 0
+Uptime: 60.07 seconds
+
+Multiplexing Analysis
+--------------------
+Maximum Concurrent Streams: 1
+Average Time Between Streams: 0.00ms
+Stream Establishment Rate: 0.00 streams/second
+
+Detailed Stream Analysis
+----------------------
